@@ -2,7 +2,7 @@
 {
   
   networking = {
-    hostName = "casa"; # Define your hostname.
+    hostName = "home"; # Define your hostname.
     networkmanager.enable = true;  # Enables Network Manager
     #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -61,7 +61,7 @@
 
 
   # Define a user account. Don't forget to set a password after the installation with `passwd --root /mnt USER`
-  users.users.casa = {
+  users.users.valentino = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
