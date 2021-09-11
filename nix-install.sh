@@ -44,12 +44,10 @@ installation(){
     device="/dev/nvme0n1"
     bootDEVICE="${device}p1"
     luksDEVICE="${device}p2"
-    addNixosHW=true
   else
     device="/dev/${drive}"
     bootDEVICE="${device}1"
     luksDEVICE="${device}2"
-    addNixosHW=false
   fi
 
 
@@ -92,20 +90,6 @@ installation(){
   mount "$bootDEVICE" /mnt/boot
   swapon /dev/vg/swap
 
-  if "$addNixosHW"; then
-    print_ok "Adding special channel for PC configuration"
-    nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-
-    nix-channel --update
-    fi
-
-
-  print_ok "Generating the configuration..."
-  nixos-generate-config --root /mnt
-
-  OPTIONS="options = [ \"noatime\"   \"nodiratime\"  \"discard\" ]; "
-
-  echo "$OPTIONS" >> /mnt/etc/nixos/hardware-configuration.nix
 
 
 
