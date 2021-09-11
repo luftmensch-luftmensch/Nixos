@@ -118,38 +118,38 @@
       configDir = "/home/valentino/.config/syncthing";
       openDefaultPorts = true; # TCP 22000 for transfer, UDP 21027 for discovery 
       
-      #declarative = {
-      #  overrideFolders = true; # Purge folders not declaratively configured!
-      #  overrideDevices = true;
-      #};
+      declarative = {
+        overrideFolders = true; # Purge folders not declaratively configured!
+        overrideDevices = true;
+      };
       #relay.enable = true;
 
-      #devices = {
-      #  P30-PRO = {
-      #    id = "POGJUQZ-LA6JNGT-T7VN6AL-ZYVOEGE-HHNDWPN-6SXXULO-IQKO7KQ-6HNPBQP"; # P30-PRO
-      #  };
-      #  PC = {
-      #    id = "OG5I5LS-4IX3TVN-3QJDBGP-ZYSBAJ7-CWXYE2E-JE7VGLL-46V3D2R-JNLIDAP"; # PC
-      #  };
-      #  
-      #};
-      #folders = {
-      #  "home/casa/Music" = {
-      #   id = "n4gcw-3q7u5";
-      #   devices = [ "PC" ]; # pc
-      #  };
+      devices = {
+        P30-PRO = {
+          id = "POGJUQZ-LA6JNGT-T7VN6AL-ZYVOEGE-HHNDWPN-6SXXULO-IQKO7KQ-6HNPBQP"; # P30-PRO
+        };
+        PC = {
+          id = "OG5I5LS-4IX3TVN-3QJDBGP-ZYSBAJ7-CWXYE2E-JE7VGLL-46V3D2R-JNLIDAP"; # PC
+        };
+        
+      };
+      folders = {
+        "home/casa/Music" = {
+         id = "n4gcw-3q7u5";
+         devices = [ "PC" ]; # pc
+        };
 
-      #  "home/casa/Dropbox" = {
-      #   id = "tcfun-ya2ir";
-      #   devices = [ "P30-PRO" "PC" ]; # NAS
-      #  };
+        "home/casa/Dropbox" = {
+         id = "tcfun-ya2ir";
+         devices = [ "P30-PRO" "PC" ]; # NAS
+        };
 
-      #  "home/casa/Video" = {
-      #   id = "tzf49-nwpwz";
-      #   devices = [ "PC" ]; # PC
-      #  };
-      #  
-      #};
+        "home/casa/Video" = {
+         id = "tzf49-nwpwz";
+         devices = [ "PC" ]; # PC
+        };
+        
+      };
 
     };
 
