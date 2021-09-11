@@ -52,7 +52,7 @@
     };
     autoOptimiseStore = true;
     #readOnlyStore = false;
-    trustedUsers = [ "root" "casa" ]; # in order to use cachix
+    trustedUsers = [ "root" "valentino" ]; # in order to use cachix
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes

@@ -89,9 +89,7 @@ installation(){
   mkdir -p /mnt/boot
   mount "$bootDEVICE" /mnt/boot
   swapon /dev/vg/swap
-
-
-
+  print_info "Done!"
 
 }
 for arg in "$@"; do

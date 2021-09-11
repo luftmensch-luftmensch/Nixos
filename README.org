@@ -1,0 +1,17 @@
+#+Title: My personal Nixos configuration with flakes
+#+Author: Valentino Bocchetti
+#+STARTUP: overview
+
+* Table of contents :toc:
+- [[#quick-start][Quick start]]
+
+* Quick start
+1. Download the latest build of [NixOS 21.05][nixos].
+2. Boot into the installer.
+3. Start the installation script in order to get a working installation
+4. Enable nix-flakes with ~nix-shell -p git nixFlakes~
+5. Clone the repository: ~git clone https://github.com/luftmensch-luftmensch/Nixos~  to =/mnt/etc/nixos=
+6. Install NixOS: =nixos-install --root /mnt --flake /mnt/etc/nixos#XYZ=, where /XYZ is [the host you want to install]/
+7. Reboot!
+8. Change your ~root~ and ~$USER~ passwords!
+9. Enjoy!

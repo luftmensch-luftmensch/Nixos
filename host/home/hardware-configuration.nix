@@ -11,7 +11,7 @@
   boot = {
     initrd = {
       luks.devices."nix-enc" = {
-        device = "/dev/disk/by-uuid/bef72725-b64c-4dd6-b0b4-2d05277f6aef"; #/dev/sda2 (blkid)
+        device = "/dev/disk/by-uuid/f89fc30c-fc5f-4d93-8ebf-c58c8e5f61ac"; #/dev/sda2 (blkid)
         preLVM = true;
         allowDiscards = true;  
       };
