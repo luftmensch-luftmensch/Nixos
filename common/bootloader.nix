@@ -23,6 +23,15 @@
       #  gfxmodeEfi = "1920x1080";
       #  gfxmodeBios = "1920x1080";
       #  theme = pkgs.nixos-grub2-theme;
+
+      #  extraEntries = ''
+      #    menuentry "Reboot" {
+      #      reboot
+      #    }
+      #    menuentry "Power off" {
+      #      halt
+      #    }
+      #  '';
       #};
       timeout = 2;
     };
