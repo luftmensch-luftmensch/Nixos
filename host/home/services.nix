@@ -117,11 +117,9 @@
       user = "valentino";
       configDir = "/home/valentino/.config/syncthing";
       openDefaultPorts = true; # TCP 22000 for transfer, UDP 21027 for discovery 
-      
-      declarative = {
-        overrideFolders = true; # Purge folders not declaratively configured!
-        overrideDevices = true;
-      };
+
+      overrideFolders = true; # Purge folders not declaratively configured!
+      overrideDevices = true;
       #relay.enable = true;
 
       devices = {
@@ -134,17 +132,17 @@
         
       };
       folders = {
-        "home/casa/Music" = {
+        "home/valentino/Music" = {
          id = "n4gcw-3q7u5";
          devices = [ "PC" ]; # pc
         };
 
-        "home/casa/Dropbox" = {
+        "home/valentino/Dropbox" = {
          id = "tcfun-ya2ir";
          devices = [ "P30-PRO" "PC" ]; # NAS
         };
 
-        "home/casa/Video" = {
+        "home/valentino/Video" = {
          id = "tzf49-nwpwz";
          devices = [ "PC" ]; # PC
         };
