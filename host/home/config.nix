@@ -72,6 +72,8 @@
       "libvirtd"
       # "vboxusers"
     ];
+    hashedPassword = "$6$RP7gMenIx8ci$k8Hj9dOPWkvDxBmv2FIaKR1KwY6sQduoM5ryU2f30UsvWg.eg5dyFNkSvQXNsNEDCoe4.maNM2wdp9KOKkR98/"; # mkpasswd -m sha-512
+
     #shell = pkgs.fish;
   };
   # This value determines the NixOS release from which the default
