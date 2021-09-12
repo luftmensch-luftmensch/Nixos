@@ -31,6 +31,9 @@
       #    menuentry "Power off" {
       #      halt
       #    }
+      #    menuentry "Bios" {
+      #      fwsetup
+      #    }
       #  '';
       #};
       timeout = 2;
