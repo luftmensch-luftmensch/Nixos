@@ -64,8 +64,8 @@
   #    
   #  };
     sudo.wheelNeedsPassword = false;
-  #  rtkit = { # Whether to enable the RealtimeKit system service, which hands out realtime scheduling priority to user processes on demand. For example, the PulseAudio server uses this to acquire realtime priority. 
-  #    enable = true; # Recommended for pipewire
-  #  };
+    rtkit = { # Whether to enable the RealtimeKit system service, which hands out realtime scheduling priority to user processes on demand. For example, the PulseAudio server uses this to acquire realtime priority. 
+      enable = true; # Recommended for pipewire
+    };
   };
 }
