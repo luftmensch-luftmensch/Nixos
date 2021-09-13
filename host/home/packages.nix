@@ -8,7 +8,7 @@
     #acpi
     alacritty
     android-file-transfer
-    # anydesk
+    #anydesk
     #ark
     #autorandr
     autotiling
@@ -28,7 +28,6 @@
 
     ### C ###
     capitaine-cursors
-    cachix
     # carla
     #colorpicker
 
@@ -54,9 +53,9 @@
     #firebird
     ffmpeg
     fish
-    # foliate # Minimal E-Book reader
+    #foliate # Minimal E-Book reader
     fortune
-    # freetube # FOSS private YT app
+    #freetube # FOSS private YT app
 
     ### G ###
     gimp-with-plugins
@@ -70,7 +69,7 @@
     #gotop
 
     ### H ###
-    haskellPackages.greenclip
+    #haskellPackages.greenclip
     htop
 
     ### J ###
@@ -84,7 +83,7 @@
     ### I ###
     imagemagick # Useful utility
     isync # Used for mu4e
-    # inetutils # (Network utilities)
+    #inetutils # (Network utilities)
 
     ### L ###
     libnotify # Used to solve dunst problems
@@ -104,20 +103,20 @@
     mu
 
     ### N ###
-    neovim
+    #neovim
     #netbeans
     networkmanagerapplet
-    # nodejs-16_x
-    # nodePackages."@vue/cli"
+    #nodejs-16_x
+    #nodePackages."@vue/cli"
     #nodePackages.npm
-    # nvtop
+    #nvtop
 
     #ncdu # like du but interactive
 
     ### O ###
     obs-studio
-    # onedrive
-    # openvpn # VPN
+    #onedrive
+    #openvpn # VPN
     openssl
 
     ### P ###
@@ -133,7 +132,7 @@
     poppler 
     #postgresql_12
     #postman
-    # progress
+    #progress
     #pulseaudio
 
     ### Q ###
@@ -153,13 +152,13 @@
     sshpass
     #steam steam-run-native # Gaming
 
-    # stow  # (TODO try it!)
+    #stow  # (TODO try it!)
     #skippy-id # (exposè function)
     #superTuxKart
 
     ### T ###
     #teamviewer
-    teams
+    #teams
     tdesktop
     telnet
     #termite # substituted with kitty
@@ -169,20 +168,19 @@
     texlive.combined.scheme-full
 
     ### U ###
-    # udiskie #(udisks2 frontend)
+    #udiskie #(udisks2 frontend)
     ueberzug
-    unrar
+    #unrar
     unzip
-    # usbguard # Protect against infected USB
+    #usbguard # Protect against infected USB
     usbutils
 
     ### V ###
     #vault # (bitwarden alternative)
-    #vim
     vimHugeX # vim with X clipboard
-    # viewnior
+    #viewnior
     #virt-viewer 
-    # openvpn wireguard # VPN Stuff
+    #openvpn wireguard # VPN Stuff
     #vscode
 
     ### W ###
@@ -197,7 +195,7 @@
     xfce.xfce4-screenshooter
     xfce.thunar # Need xfce.tumbler
     xfce.thunar-archive-plugin
-    # xfce.thunar-volman # automatic management of removable drives and media
+    #xfce.thunar-volman # automatic management of removable drives and media
     xfce.tumbler
     xorg.xev
     xorg.xkill
@@ -226,7 +224,7 @@
 
     ### Nix related stuff ###
 
-    #cachix                              # Compiled binary hosting for Nix
+    cachix                              # Compiled binary hosting for Nix
     #direnv                              # Manage directory environments
     #niv                                 # Dependency management for Nix
     nix-index                           # Locate packages
@@ -243,8 +241,8 @@
     #mtpfs 
 
     ### Developement with yarn and kubernets ###
-    # yarn
-    # httpie
+    #yarn
+    #httpie
     #k9s
     #kubectx
     #kubernetes-helm
@@ -266,10 +264,6 @@
     #docker-compose
     
     #gnupg pinentry
-
-    #(pkgs.callPackage ./uwufetch.nix {
-    #    #inherit (pkgs) stdenv fetchFromGitHub; 
-    #  })
 
     #(texlive.combine {
     #  inherit (texlive)
