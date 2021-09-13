@@ -58,6 +58,10 @@
     locate = {
       enable = true;
     };
+    logind = {
+      lidSwitch = "hibernate"; #don't suspend when lid is closed (other options are poweroff reboot hatl kexec suspend hibernate hybrid-sleep suspend-then-hiberante lock)
+      lidSwitchDocked = "poweroff";
+    };
     #keynav = { # Enable mouse control with keyboard
     #  enable = true;
     #};

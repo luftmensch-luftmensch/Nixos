@@ -69,7 +69,7 @@
     #gotop
 
     ### H ###
-    haskellPackages.greenclip
+    #haskellPackages.greenclip
     htop
 
     ### J ###
@@ -103,7 +103,7 @@
     mu
 
     ### N ###
-    neovim
+    #neovim
     #netbeans
     networkmanagerapplet
     # nodejs-16_x
@@ -137,7 +137,7 @@
 
     ### Q ###
     qt5ct
-    qrcp
+    #qrcp
     qutebrowser
 
     ### R ###
@@ -158,7 +158,7 @@
 
     ### T ###
     #teamviewer
-    teams
+    #teams
     tdesktop
     telnet
     #termite # substituted with kitty
@@ -265,10 +265,6 @@
     #docker-compose
     
     #gnupg pinentry
-
-    #(pkgs.callPackage ./uwufetch.nix {
-    #    #inherit (pkgs) stdenv fetchFromGitHub; 
-    #  })
 
     #(texlive.combine {
     #  inherit (texlive)
