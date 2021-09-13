@@ -5,7 +5,7 @@
     # Cli programs 
 
     ### A ###
-    #acpi
+    acpi
     alacritty
     android-file-transfer
     # anydesk
