@@ -22,6 +22,8 @@
         #swaylock # substituted with swaylock-effects
         swaylock-effects
         swayidle
+        sxiv
+        imv
         wl-clipboard
         mako # notification daemon
         wofi
