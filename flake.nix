@@ -6,7 +6,7 @@
     #nixpkgs.url = "nixpkgs/nixos-21.05";
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
   };
 
   outputs = { nixpkgs, nixos-hardware, ... }: 
