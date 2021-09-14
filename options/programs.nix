@@ -12,20 +12,23 @@
       enable = true;
       enableSSHSupport = true;
       #grabKeyboardAndMouse = true;
-      #pinentryFlavor = "curses"; # use pinetry without X
-      pinentryFlavor = "gtk2"; # use pinetry without X 
+      pinentryFlavor = "gnome3"; # Set this in order to use it on wayland
       # Other options are "curses", "tty", "gtk2", "qt", "emacs", "gnome3"
     };
     sway =  {
       enable = true;
       wrapperFeatures.gtk = true;
       extraPackages = with pkgs; [
-        swaylock
+        #swaylock # substituted with swaylock-effects
+        swaylock-effects
         swayidle
         wl-clipboard
         mako # notification daemon
         wofi
         waybar
+        glib # Used to set GTK Theme & Font
+        grim slurp # Used to make screenshots
+
       ];
     };
 
