@@ -16,19 +16,18 @@
       pinentryFlavor = "gtk2"; # use pinetry without X 
       # Other options are "curses", "tty", "gtk2", "qt", "emacs", "gnome3"
     };
-    #sway =  {
-    #  enable = true;
-    #  wrapperFeatures.gtk = true;
-    #  extraPackages = with pkgs; [
-    #    autotiling
-    #    swaylock
-    #    swayidle
-    #    wl-clipboard
-    #    mako # notification daemon
-    #    wofi
-    #    waybar
-    #  ];
-    #};
+    sway =  {
+      enable = true;
+      wrapperFeatures.gtk = true;
+      extraPackages = with pkgs; [
+        swaylock
+        swayidle
+        wl-clipboard
+        mako # notification daemon
+        wofi
+        waybar
+      ];
+    };
 
     #zsh = {
     #  enable = true;

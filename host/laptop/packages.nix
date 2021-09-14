@@ -41,8 +41,8 @@
     dunst
     
     ### E ###
-    emacs
-    #emacsPgtkGcc # enable first the overlay!
+    #emacs
+    emacsPgtkGcc # enable first the overlay!
     exa
     exiftool # Used for emms
 
