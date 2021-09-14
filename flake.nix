@@ -1,5 +1,6 @@
 {
-  description = "My NixOS configuration";
+  #description = "My NixOS configuration";
+  description = "Nixos System configuration";
 
   inputs = {
     #nixpkgs.url = "nixpkgs/nixos-21.05";
