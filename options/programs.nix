@@ -15,21 +15,30 @@
       pinentryFlavor = "gnome3"; # Set this in order to use it on wayland
       # Other options are "curses", "tty", "gtk2", "qt", "emacs", "gnome3"
     };
+
     sway =  {
       enable = true;
       wrapperFeatures.gtk = true;
       extraPackages = with pkgs; [
         #swaylock # substituted with swaylock-effects
-        swaylock-effects
-        swayidle
+        bemenu # dmenu for wayland
         sxiv
         imv
         wl-clipboard
         mako # notification daemon
-        wofi
-        waybar
-        glib # Used to set GTK Theme & Font
-        grim slurp # Used to make screenshots
+        #wofi
+
+        # GTK Theme & Font
+        glib 
+
+        # Screenshots utility
+        grim slurp 
+        
+        waybar # Bar
+
+        # Sway relative programs
+        swayidle
+        swaylock-effects
 
       ];
     };
