@@ -33,6 +33,8 @@
 
         # Screenshots utility
         grim slurp 
+
+        jq # Used to make a screenshot of a specific window
         
         waybar # Bar
 
