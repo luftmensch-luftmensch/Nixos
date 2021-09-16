@@ -25,7 +25,7 @@
         sxiv
         imv
         wl-clipboard
-        mako # notification daemon
+        #mako # notification daemon
         #wofi
 
         # GTK Theme & Font
