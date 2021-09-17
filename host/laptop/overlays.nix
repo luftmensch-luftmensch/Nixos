@@ -41,7 +41,8 @@
       url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
       #sha256= "0000000000000000000000000000000000000000000000000000";
       #sha256 = "14vzfapq87xarpqfilbmi72dls77acv3hxa8m15p72h8q3xbgxsb";
-      sha256 = "1lfpzj9fqpzals2knsz2ixdg8k29iwjs2y08xs7vl5am3zzl6xlk";
+      #sha256 = "1lfpzj9fqpzals2knsz2ixdg8k29iwjs2y08xs7vl5am3zzl6xlk";
+      sha256 = "1dsig22yqh8q93g819xd2xlj5zsm2wwxw4ylxw67qc4ri52ddf86";
 
     }))
 
