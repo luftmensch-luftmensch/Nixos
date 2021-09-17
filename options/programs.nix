@@ -2,6 +2,7 @@
 
 {
   programs = {
+    steam.enable = true;
     bash = {
       enableCompletion = true;
     };
