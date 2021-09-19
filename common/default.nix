@@ -4,6 +4,7 @@
   imports = [
     # Handy way to make flake.nix less ripetitive
     ./bootloader.nix # bootloader options 
+    ./packages.nix # Global packages
     ./overrides.nix # dmenu patches
     ./security.nix 
     ./shared.nix # Timezone, keyboard options, fonts, environment options, Flatpak

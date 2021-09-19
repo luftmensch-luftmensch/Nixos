@@ -1,16 +1,36 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
+let
+  user_pkgs = if (config.networking.hostName == "home") then[
+    dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
+    emacs
+    gimp-with-plugins
+    libreoffice
+    linuxPackages.cpupower
+    plymouth # enable also the boot option
+
+    edk2
+    libvirt
+    OVMF
+    
+
+  ] else [
+    acpi
+    autorandr
+    brightnessctl
+    emacsPgtkGcc # enable first the overlay!
+    touchegg # Waiting for the latest release -> now using an overlay
+  ];
+in
 {
 
   environment.systemPackages = with pkgs; [
     # Cli programs 
 
     ### A ###
-    #acpi
     alacritty
-    android-file-transfer
+    #android-file-transfer
     #anydesk
     #ark
-    #autorandr
     autotiling
     #appimage-run
 
@@ -23,7 +43,6 @@
     bluez
     breeze-gtk
     breeze-qt5
-    #brightnessctl
     #bmon # Network Bandwidth Monitoring and Debugging Tool
 
     ### C ###
@@ -35,13 +54,11 @@
     #dbeaver # A better alternative to PGAdmin
     discord
     devour # Enable terminal swallowing (used for zathura)
-    dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
     #dropbox
     #dropbox-cli
     dunst
     
     ### E ###
-    emacs
     #emacsPgtkGcc # enable first the overlay!
     exa
     exiftool # Used for emms
@@ -58,7 +75,6 @@
     #freetube # FOSS private YT app
 
     ### G ###
-    gimp-with-plugins
     git
     # gitAndTools.gitFull
 
@@ -87,8 +103,6 @@
 
     ### L ###
     libnotify # Used to solve dunst problems
-    libreoffice
-    linuxPackages.cpupower # ENABLED ONLY ON HOME CONFIGURATION FILE
     lm_sensors
     lsd
     lshw
@@ -127,7 +141,6 @@
     pavucontrol
     pcmanfm
     picom
-    plymouth # enable also the boot option
     polybarFull
     poppler 
     #postgresql_12
@@ -162,7 +175,6 @@
     tdesktop
     telnet
     #termite # substituted with kitty
-    #touchegg # Waiting for the latest release -> now using an overlay
     thunderbird
 
     texlive.combined.scheme-full
@@ -210,7 +222,7 @@
     zathura  
     zip
 
-  # Programming
+    # Programming
     ccls clang_11 cmake gcc10 #gdb
     gnumake valgrind
     jdk
@@ -250,9 +262,6 @@
 
     ### VM dependencies ###
     bridge-utils
-    edk2
-    libvirt
-    OVMF
     kvm
     qemu
     virt-manager
@@ -274,5 +283,5 @@
 
     #xtitle
 
-  ];
+  ] ++ user_pkgs ;
 }
