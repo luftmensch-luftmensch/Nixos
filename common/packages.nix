@@ -1,24 +1,24 @@
 { pkgs, lib, config, ... }:
 let
-  user_pkgs = if (config.networking.hostName == "home") then[
-    pkgs.dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
-    pkgs.emacs
-    pkgs.gimp-with-plugins
-    pkgs.libreoffice
-    pkgs.linuxPackages.cpupower
-    pkgs.plymouth # enable also the boot option
+  user_pkgs = with pkgs; if (config.networking.hostName == "home") then[
+    dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
+    emacs
+    gimp-with-plugins
+    libreoffice
+    linuxPackages.cpupower
+    plymouth # enable also the boot option
 
-    pkgs.edk2
-    pkgs.libvirt
-    pkgs.OVMF
+    edk2
+    libvirt
+    OVMF
     
 
   ] else [
-    pkgs.acpi
-    pkgs.autorandr
-    pkgs.brightnessctl
-    pkgs.emacsPgtkGcc # enable first the overlay!
-    pkgs.touchegg # Waiting for the latest release -> now using an overlay
+    acpi # information about battery
+    autorandr # manage multiple screen
+    brightnessctl # manage brightness
+    emacsPgtkGcc # emacs 28 with Pgtk + Gcc
+    touchegg # Waiting for the latest release -> now using an overlay
   ];
 in
 {
