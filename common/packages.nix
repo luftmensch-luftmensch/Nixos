@@ -18,6 +18,7 @@ let
     autorandr # manage multiple screen
     brightnessctl # manage brightness
     emacsPgtkGcc # emacs 28 with Pgtk + Gcc
+    pulseaudio
     touchegg # Waiting for the latest release -> now using an overlay
   ];
 in
