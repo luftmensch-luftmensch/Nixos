@@ -24,7 +24,6 @@
           modules = [
             nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen1 # Nixos hardware
             ./thinkpad.nix
-
           ];
 
         };
@@ -32,13 +31,9 @@
         home = lib.nixosSystem {
           inherit system;
           modules = [
-            # TODO: Add home configuration
-            #nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen1 # Nixos hardware
             ./home.nix
           ];
-
         };
-
       };
     };
 }
