@@ -3,9 +3,11 @@
 
   imports = [
     # Handy way to make flake.nix less ripetitive
-    ./config.nix # Networking, hardware options, nix options, user options
     ./hardware-configuration.nix # Pretty obvious right?
+    ./hardware.nix # Hardware options
+    ./networking.nix # Networking option
     #./overlays.nix # emacs
-    ./services.nix # Xserver + Other services
+    ./services.nix # Other services
+    ./xorg.nix # X11 configuration
   ];
 }
