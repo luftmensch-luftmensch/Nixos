@@ -136,6 +136,27 @@
 
         CPU_MAX_PERF_ON_AC=75;
         CPU_MAX_PERF_ON_BAT=60;
+        #SOUND_POWER_SAVE_ON_AC = 0;
+        #SOUND_POWER_SAVE_ON_BAT = 1;
+
+        #CPU_MIN_PERF_ON_AC = 0;
+        #CPU_MAX_PERF_ON_AC = 100;
+
+        #CPU_MIN_PERF_ON_BAT = 0;
+        #CPU_MAX_PERF_ON_BAT = 50;
+
+        #CPU_BOOST_ON_AC = 1;
+        #CPU_BOOST_ON_BAT = 1;
+        #SCHED_POWERSAVE_ON_AC = 0;
+        #SCHED_POWERSAVE_ON_BAT = 1;
+        #ENERGY_PERF_POLICY_ON_AC = "performance";
+        #ENERGY_PERF_POLICY_ON_BAT = "power";
+        #RESTORE_DEVICE_STATE_ON_STARTUP = 0;
+        #RUNTIME_PM_ON_AC = "on";
+        #RUNTIME_PM_ON_BAT = "auto";
+        #PCIE_ASPM_ON_AC = default;
+        #PCIE_ASPM_ON_BAT = default;
+        #USB_AUTOSUSPEND = 0;
       };
     };
     #udiskie = {
