@@ -47,6 +47,7 @@
 
       #export SUDO_ASKPASS="${pkgs.ksshaskpass}/bin/ksshaskpass"
       #export SSH_ASKPASS="${pkgs.ksshaskpass}/bin/ksshaskpass"
+      #export _JAVA_AWT_WM_NONREPARENTING=1
       extraSessionCommands = ''
       export MOZ_ENABLE_WAYLAND=1
       export SDL_VIDEODRIVER=wayland
