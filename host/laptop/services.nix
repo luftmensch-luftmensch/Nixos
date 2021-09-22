@@ -100,17 +100,20 @@
         
       };
       folders = {
-        "home/valentino/Music" = {
+        "Music" = {
+         path = "/home/valentino/Music";
          id = "n4gcw-3q7u5";
          devices = [ "home" ]; # home
         };
 
-        "home/valentino/Dropbox" = {
+        "Dropbox" = {
+         path = "/home/valentino/Dropbox";
          id = "tcfun-ya2ir";
          devices = [ "P30-PRO" "home" ]; # Multiple devices
         };
 
-        "home/valentino/Video" = {
+        "Video" = {
+         path = "/home/valentino/Video";
          id = "tzf49-nwpwz";
          devices = [ "home" ]; # home
         };
