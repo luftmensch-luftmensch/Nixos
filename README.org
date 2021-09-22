@@ -14,58 +14,6 @@ The entire system configuration is written in Nix. It is composed of a host spec
 
 A convenience [[file:nix-install.sh][script]] is provided to setup the system on the live ISO.
 * Structure
-#+begin_comment
-Nixos
-├── cachix
-│  └── nix-community.nix
-├── common
-│  ├── bootloader.nix
-│  ├── cachix.nix
-│  ├── default.nix
-│  ├── dmenu-patches
-│  │  ├── borders
-│  │  ├── case-insensitive
-│  │  ├── numbers
-│  │  └── selezione
-│  ├── environment.nix
-│  ├── fonts.nix
-│  ├── locales.nix
-│  ├── nix.nix
-│  ├── overrides.nix
-│  ├── packages.nix
-│  ├── programs.nix
-│  ├── security.nix
-│  ├── services.nix
-│  ├── shared.nix
-│  ├── user.nix
-│  └── virtualisation.nix
-├── flake.lock
-├── flake.nix
-├── home.nix
-├── host
-│  ├── home
-│  │  ├── default.nix
-│  │  ├── hardware-configuration.nix
-│  │  ├── hardware.nix
-│  │  ├── networking.nix
-│  │  ├── overlays.nix
-│  │  ├── services-home.nix
-│  │  └── xorg.nix
-│  └── laptop
-│     ├── default.nix
-│     ├── hardware-configuration.nix
-│     ├── hardware.nix
-│     ├── networking.nix
-│     ├── overlays.nix
-│     ├── services-laptop.nix
-│     ├── wayland.nix
-│     └── xorg.nix
-├── nix-install.sh
-├── README.org
-└── thinkpad.nix
-#+end_comment
-
-#+begin_quote
  Nixos
 ├──  cachix
 │  └──  nix-community.nix
@@ -114,8 +62,6 @@ Nixos
 ├──  nix-install.sh
 ├──  README.org
 └──  thinkpad.nix
-
-#+end_quote
 * Quick start
 1. Download the latest build of [[https://nixos.org/download.html][Nixos]].
 2. Boot into the installer.
