@@ -8,6 +8,7 @@
     ./networking.nix # Networking option
     ./overlays.nix # Touchegg + systemd services (+ emacs, currrently disabled)
     ./services.nix # Xserver + Other services
+    ./wayland.nix # Sway WM
     ./xorg.nix # X11 configuration
   ];
 }
