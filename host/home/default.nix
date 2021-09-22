@@ -7,7 +7,7 @@
     ./hardware.nix # Hardware options
     ./networking.nix # Networking option
     #./overlays.nix # emacs
-    ./services.nix # Other services
+    ./services-home.nix # Services specific for home PC configuration
     ./xorg.nix # X11 configuration
   ];
 }

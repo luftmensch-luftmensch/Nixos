@@ -13,6 +13,7 @@
     ./packages.nix # Global packages
     ./programs.nix # Global programs
     ./security.nix 
+    ./services.nix # Common services shared between my hosts
     ./shared.nix # Timezone, keyboard options, fonts, environment options, Flatpak
     ./user.nix # Username + extragroup
     ./virtualisation.nix # virtualisation -> now using only libvirt
