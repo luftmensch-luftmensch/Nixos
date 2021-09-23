@@ -7,9 +7,10 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
+    discord-overlay.url = "github:InternetUnexplorer/discord-overlay";
   };
 
-  outputs = { nixpkgs, nixos-hardware, ... }: 
+  outputs = { nixpkgs, nixos-hardware, discord-overlay, ... }: 
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {

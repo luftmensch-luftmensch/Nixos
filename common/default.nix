@@ -10,6 +10,7 @@
     ./locales.nix # Timezone and locales
     ./nix.nix # Nix package manager configuration & extras
     ./overrides.nix # dmenu patches
+    ./overlays.nix # discord 0.0.15 -> 0.0.16
     ./packages.nix # Global packages
     ./programs.nix # Global programs
     ./security.nix 
