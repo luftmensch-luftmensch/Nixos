@@ -4,6 +4,7 @@ let
     dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
     emacs
     gimp-with-plugins
+    imv
     libreoffice
     linuxPackages.cpupower
     plymouth # enable also the boot option
