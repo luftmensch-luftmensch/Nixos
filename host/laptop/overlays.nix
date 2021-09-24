@@ -40,7 +40,7 @@
     (import (builtins.fetchTarball {
       url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
       #sha256= "0000000000000000000000000000000000000000000000000000";
-      sha256 = "0cgh8sknpwdsb1160n74i89bvsdimqz6vj3gwrg0vqzqgfgz3krq";
+      sha256 = "00i3wmd0xzzlwgvxhy50wrg6lsb44by99hqhg872d0qj5k6m87fx";
 
     }))
 
