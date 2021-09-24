@@ -35,6 +35,7 @@
     #export _JAVA_AWT_WM_NONREPARENTING=1
     extraSessionCommands = ''
       export MOZ_ENABLE_WAYLAND=1
+      export MOZ_DBUS_REMOTE=1
       export SDL_VIDEODRIVER=wayland
       export QT_QPA_PLATFORM=wayland
       export QT_QPA_PLATFORMTHEME=qt5ct
