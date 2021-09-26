@@ -12,6 +12,8 @@ let
     edk2
     libvirt
     OVMF
+
+    teams
     
 
   ] else [
