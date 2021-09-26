@@ -31,7 +31,7 @@ in
     ### A ###
     alacritty
     #android-file-transfer
-    #anydesk
+    anydesk
     #ark
     autotiling
     #appimage-run
