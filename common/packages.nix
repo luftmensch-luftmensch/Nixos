@@ -33,6 +33,7 @@ in
     ### A ###
     alacritty
     #android-file-transfer
+    androidStudioPackages.dev
     anydesk
     #ark
     autotiling
