@@ -1,20 +1,20 @@
 { lib, config, pkgs, ... }:
 {
   fonts.fonts = with pkgs; [
-    dejavu_fonts
+    #dejavu_fonts
     font-awesome
     fira-code
-    liberation_ttf	
-    google-fonts
-    hack-font
+    #liberation_ttf	
+    #google-fonts
+    #hack-font
     (nerdfonts.override { fonts = [ "Iosevka" ];  })
-    noto-fonts-emoji 
+    #noto-fonts-emoji 
     source-code-pro
-    vegur
-    victor-mono
-    cantarell_fonts
-    inconsolata
+    #vegur
+    #victor-mono
+    #cantarell_fonts
+    #inconsolata
     mononoki
-    twemoji-color-font
+    #twemoji-color-font
   ];
 }
