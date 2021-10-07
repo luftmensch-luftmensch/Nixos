@@ -1,0 +1,121 @@
+#!/usr/bin/env bash
+
+set -e # exit immediately if a command return non-zero status
+usage() {
+  echo "This script generate a full working Nixos installation with encrypted ZFS partition as root"
+
+
+  echo "Options"
+  echo "  -h, --help    prints this message and exits"
+  echo "  -s, --start   start the installation"
+  echo "   *            print this menu"
+  exit 1
+}
+
+print_ok() {
+    printf "\e[32m%b\e[0m" "$1"
+    printf "\n"
+}
+
+print_info() {
+    printf "\e[36m%b\e[0m" "$1"
+    printf "\n"
+}
+
+print_error() {
+    printf "\e[31m%b\e[0m" "$1"
+    printf "\n"
+}
+
+installation(){
+
+  if [[ $EUID -ne 0 ]]; then
+    print_error "This scripts needs to be runned as root!"
+    exit 1
+  fi
+
+  read -p "nvme or sda/vda: " -r
+  drive=$REPLY
+
+  if [[ "$drive" =~ "nvme" ]]; then
+    device="/dev/nvme0n1"
+    bootDEVICE="${device}p1"
+    swapDEVICE="${device}p2"
+    luksDEVICE="${device}p3"
+  else
+    device="/dev/${drive}"
+    bootDEVICE="${device}1"
+    swapDEVICE="${device}2"
+    luksDEVICE="${device}3"
+  fi
+
+  print_error "Wiping out all the data and signatures of the choosen disk (${device})..."
+
+  #wipefs --all -f "${device}"
+  sgdisk --zap-all "${device}"
+
+  print_info "Done!"
+  print_info "Starting partitioning of ${device} ..."
+
+  # MEMO
+  # -n <a>:<b>:<c>: New partition with number a, starting at sector b and ending at sector c.
+  # Note that specifying a partition number of 0 always takes the first available number
+  # -t (partition type code):
+  #    EF00 -> boot efi
+  #    8200 -> swap
+  #    BF01 -> ZFS
+
+  sgdisk -n 1:0:+512M -t 1:EF00 "${device}"
+  sgdisk -n 2:0:+20G -t 2:8200 -c 2:swap "${device}"
+  sgdisk -n 3:0:0 -t 3:BF01 -c 3:ZFS "${device}"
+
+  print_info "Done!"
+  print_ok "Starting cryptsetup..."
+
+
+  cryptsetup luksFormat "$luksDEVICE"
+  cryptsetup open --type luks "$luksDEVICE" nix-enc
+
+  print_ok "Generating ZFS pool..."
+  zpool create -O mountpoint=none rpool /dev/mapper/nix-enc
+
+  zfs create -o mountpoint=legacy rpool/root
+  zfs create -o mountpoint=legacy rpool/root/nixos
+  zfs create -o mountpoint=legacy rpool/home
+
+  print_info "Done!"
+
+  print_ok "Formatting boot & swap partitions..."
+  mkfs.vfat -n boot "$bootDEVICE"
+  mkswap "$swapDEVICE" -L SWAP
+
+  print_info "Done!"
+
+  print_ok "Mounting partitions"
+
+  mount -t zfs rpool/root/nixos /mnt
+  mkdir /mnt/{boot,home}
+  mount -t zfs rpool/home /mnt/home
+
+  mount "$bootDEVICE" /mnt/boot
+  swapon "$swapDEVICE"
+
+  print_info "Done!"
+
+  nixos-generate-config --root /mnt
+
+}
+
+
+if [ $# -eq 0  ]
+then
+        usage
+        exit
+fi
+
+
+case "$1" in
+    "-h" | "--help") usage ;;
+    "-s" | "--start") installation ;;
+    *) echo "DEFAULT"
+esac
