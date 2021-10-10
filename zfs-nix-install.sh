@@ -1,5 +1,29 @@
 #!/usr/bin/env bash
 
+# USEFUL LINKS AND LECTURE
+
+# https://grahamc.com/blog/nixos-on-zfs
+
+# https://grahamc.com/blog/erase-your-darlings
+
+# https://elis.nu/blog/2020/05/nixos-tmpfs-as-root/
+
+# https://elis.nu/blog/2020/06/nixos-tmpfs-as-home/
+
+# https://www.reddit.com/r/NixOS/comments/g9wks6/root_on_tmpfs/
+
+# https://elis.nu/blog/2019/08/encrypted-zfs-mirror-with-mirrored-boot-on-nixos/
+
+# https://www.reddit.com/r/NixOS/comments/o1er2p/tmpfs_as_root_but_without_hardcoding_your/
+
+# https://linuxhint.com/configuring-zfs-cache/
+
+# https://jrs-s.net/2018/08/17/zfs-tuning-cheat-sheet
+
+# https://www.reddit.com/r/zfs/comments/nsc235/what_are_all_the_properties_that_cant_be_modified/
+
+# https://www.reddit.com/r/NixOS/comments/q19bu1/multiboot_archlinux_nixos_grub_zfs_encrypted_setup/
+
 set -e # exit immediately if a command return non-zero status
 usage() {
   echo "This script generate a full working Nixos installation with encrypted ZFS partition as root"
