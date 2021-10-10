@@ -36,6 +36,8 @@ in
     androidStudioPackages.dev
     anydesk
     #ark
+    aspell
+    aspellDicts.it
     autotiling
     #appimage-run
 
