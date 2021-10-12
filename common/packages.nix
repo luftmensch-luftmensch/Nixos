@@ -13,7 +13,6 @@ let
     libvirt
     OVMF
 
-    teams
     
 
   ] else [
@@ -178,7 +177,7 @@ in
 
     ### T ###
     #teamviewer
-    #teams
+    teams
     tdesktop
     telnet
     #termite # substituted with kitty
