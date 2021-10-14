@@ -33,7 +33,7 @@ in
     alacritty
     #android-file-transfer
     androidStudioPackages.dev
-    anydesk
+    #anydesk
     #ark
     aspell
     aspellDicts.it
