@@ -88,6 +88,17 @@
         #USB_AUTOSUSPEND = 0;
       };
     };
+
+    zfs = {
+      
+      trim = {
+	  enable = true;
+      };
+
+      autoScrub = {
+	  enable = true;
+      };
+    };
     
   };
 }
