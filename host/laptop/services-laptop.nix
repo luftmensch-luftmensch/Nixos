@@ -92,11 +92,12 @@
     zfs = {
       
       trim = {
-	  enable = true;
+        enable = true;
       };
 
       autoScrub = {
-	  enable = true;
+        enable = true;
+        #interval = "weekly";
       };
     };
     
