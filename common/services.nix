@@ -48,6 +48,7 @@
     #};
     printing = {
       enable = true;
+      drivers = [ pkgs.hplip pkgs.brlaser pkgs.brgenml1lpr pkgs.brgenml1cupswrapper ];
     };
 
     #redshift = {

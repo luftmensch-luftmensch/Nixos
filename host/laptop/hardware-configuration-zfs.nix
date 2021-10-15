@@ -22,6 +22,7 @@
     };
 
     kernelModules = [ "kvm-amd" ];
+    kernelParams = [ "quiet" "udev.log_priority=3" ]; # silent boot
     extraModulePackages = [ ];
     supportedFilesystems = [ "zfs" ];
   };

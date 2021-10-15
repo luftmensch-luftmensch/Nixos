@@ -28,5 +28,8 @@
   #  virtualbox = {
   #    host.enable = true;
   #  };
+  #  spiceUSBRedirection = {
+  #    enable = true;
+  #  };
   };
 }

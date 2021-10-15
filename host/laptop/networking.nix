@@ -1,4 +1,10 @@
 { lib, config, pkgs, ... }:
+#let
+#  localRanges = [{
+#    from = 1714;
+#    to = 1764;
+#  }];
+#  in
 {
   networking = {
     hostName = "PC"; # Define your hostname.
@@ -22,6 +28,18 @@
     #  allowedTCPPorts = [ ... ];
     #  allowedUDPPorts = [ ... ];
     #  enable = false;
+
+    #  interfaces = {
+    #    wlp3s0 = {
+    #      allowedTCPPortRanges = localRanges;
+    #      allowedUDPPortRanges = localRanges;         
+    #    };
+
+    #    enp2s0f0 = {
+    #      allowedTCPPortRanges = localRanges;
+    #      allowedUDPPortRanges = localRanges;         
+    #    };
+    #  };
     #};
   };
 
