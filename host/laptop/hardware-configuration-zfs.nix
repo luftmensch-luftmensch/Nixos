@@ -23,6 +23,12 @@
 
     kernelModules = [ "kvm-amd" ];
     kernelParams = [ "quiet" "udev.log_priority=3" ]; # silent boot
+    # Other kernelParams: 
+    # "acpi_rev_override=5" "scsi_mod.use_blk_mq=1" "splash" "vga=current" "i915.fastboot=1" "pti=off" 
+    # "loglevel=3" "systemd.show_status=auto" "udev.log_priority=3" "modeset" "nofb" "spectre_v2=off"
+    # "acpi_rev_override=1" "pcie_port_pm=off" "rd.systemd.show_status=auto" "rd.udev.log_priority=3" 
+    # "cgroup_no_v1=all" "systemd.unified_cgroup_hierarchy=yes" 
+
     extraModulePackages = [ ];
     supportedFilesystems = [ "zfs" ];
   };

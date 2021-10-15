@@ -44,6 +44,12 @@
     #  theme = "breeze";
     };
     #kernelPackages = pkgs.linuxPackages_latest;
+    #kernel = {
+    #  sysctl."vm.swappiness" = 0;
+    #  sysctl."kernel/sysrq" = 1;
+    #  "net.ipv6.conf.all.use_tempaddr" = 2;
+    #};
     #cleanTmpDir = true;
+    # consoleLogLevel = 3;
   };
 }
