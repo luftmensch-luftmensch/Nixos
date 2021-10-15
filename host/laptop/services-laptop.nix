@@ -7,7 +7,7 @@
     };
 
     logind = {
-      lidSwitch = "hibernate"; #don't suspend when lid is closed (other options are poweroff reboot hatl kexec suspend hibernate hybrid-sleep suspend-then-hiberante lock)
+      lidSwitch = "suspend"; #don't suspend when lid is closed (other options are poweroff reboot hatl kexec suspend hibernate hybrid-sleep suspend-then-hiberante lock)
       lidSwitchDocked = "poweroff";
     };
 

@@ -8,7 +8,7 @@
     extraPackages = with pkgs; [
       #swaylock # substituted with swaylock-effects
       #bemenu # dmenu for wayland
-      sxiv
+      #sxiv
       imv
       wl-clipboard
       #mako # notification daemon
