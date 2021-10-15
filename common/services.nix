@@ -75,6 +75,10 @@
       extraRules = ''
         ACTION=="add", SUBSYSTEMS=="usb", SUBSYSTEM=="block", ENV{ID_FS_USAGE}=="filesystem", RUN{program}+="${pkgs.systemd}/bin/systemd-mount --no-block --automount=yes --collect $devnode /media"       
     '';
+
+    #Autosuspend usb
+    #ACTION=="add", SUBSYSTEM=="usb", ATTR{power/control}="auto"
+    #ACTION=="add", SUBSYSTEM=="usb", TEST=="power/autosuspend" ATTR{power/autosuspend}="120"
       
     };
     #teamviewer = {

@@ -45,8 +45,9 @@
     };
     #kernelPackages = pkgs.linuxPackages_latest;
     #kernel = {
-    #  sysctl."vm.swappiness" = 0;
+    #  sysctl."vm.swappiness" = 0; # or 1
     #  sysctl."kernel/sysrq" = 1;
+    #  sysctl."net.ipv4.icmp_echo_ignore_broadcasts" = 1; # Refuse ICMP echo requests on my desktop/laptop; nobody has any business  pinging them, unlike my servers.
     #  "net.ipv6.conf.all.use_tempaddr" = 2;
     #};
     #cleanTmpDir = true;

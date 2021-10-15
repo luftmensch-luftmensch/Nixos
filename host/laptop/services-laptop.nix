@@ -90,10 +90,13 @@
     };
 
     zfs = {
-      
       trim = {
         enable = true;
       };
+
+      #autoSnapshot = {
+      #  enable = true;
+      #};
 
       autoScrub = {
         enable = true;
