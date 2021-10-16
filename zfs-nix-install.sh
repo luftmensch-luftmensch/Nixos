@@ -101,11 +101,11 @@ installation(){
   cryptsetup open --type luks "$luksDEVICE" nix-enc
 
   print_ok "Generating ZFS pool..."
-  zpool create -O mountpoint=none rpool /dev/mapper/nix-enc
+  zpool create -O mountpoint=none -o ashift=12 -O atime=off -O acltype=posixacl -O xattr=sa -O compression=lz4 zroot /dev/mapper/nix-enc
 
-  zfs create -o mountpoint=legacy rpool/root
-  zfs create -o mountpoint=legacy rpool/root/nixos
-  zfs create -o mountpoint=legacy rpool/home
+  zfs create -o mountpoint=legacy zroot/root
+  zfs create -o mountpoint=legacy zroot/root/nixos
+  zfs create -o mountpoint=legacy zroot/home
 
   print_info "Done!"
 
@@ -117,9 +117,9 @@ installation(){
 
   print_ok "Mounting partitions"
 
-  mount -t zfs rpool/root/nixos /mnt
+  mount -t zfs zroot/root/nixos /mnt
   mkdir /mnt/{boot,home}
-  mount -t zfs rpool/home /mnt/home
+  mount -t zfs zroot/home /mnt/home
 
   mount "$bootDEVICE" /mnt/boot
   swapon "$swapDEVICE"
