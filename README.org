@@ -5,22 +5,18 @@
 * Table of contents :toc:
 - [[#about][About]]
 - [[#quick-start][Quick start]]
-- [[#todo-list][TODO-LIST]]
-  - [[#add-an-option-to-btrfs-configuration-work-in-progress][Add an option to btrfs configuration (work-in-progress)]]
 
 * About
 The entire system configuration is written in Nix. It is composed of a host specific configuration ([[file:host/home/][home]] & [[file:host/laptop/][laptop]]) that includes stuff  specific for my different hosts; a [[file:common/][common]] directory containing shared config files between all my machines, and a [[file:cachix/][cachix]] directory in order to make less expensive switching to a new generation ([[https://app.cachix.org/cache/nix-community][Installation guide]]).
 
-A convenience [[file:nix-install.sh][script]] is provided to setup the system on the live ISO.
+A convenience [[file:nix-install.sh][script]] is provided to setup the system on the live ISO (both ext4 and zfs installation is supported).
 * Quick start
 1. Download the latest build of [[https://nixos.org/download.html][Nixos]].
 2. Boot into the installer.
-3. Start the installation script in order to get a working installation (=./nix-install.sh -s=) (*NB* currently supported only ext4 in this configuration)
+3. Start the installation script in order to get a working installation (=./nix-install.sh -s= for ext4 installation, =./zfs-nix-install -s= for zfs installation)
 4. Enable nix-flakes with ~nix-shell -p git nixFlakes~
 5. Clone the repository: ~git clone https://github.com/luftmensch-luftmensch/Nixos~  to =/mnt/etc/nixos=
 6. Install NixOS: =nixos-install --root /mnt --flake /mnt/etc/nixos#XYZ=, where /XYZ is [the host you want to install]/
 7. Reboot!
 8. Change your ~root~ and ~$USER~ passwords!
 9. Enjoy!
-* TODO-LIST
-** TODO Add an option to btrfs configuration (work-in-progress)
