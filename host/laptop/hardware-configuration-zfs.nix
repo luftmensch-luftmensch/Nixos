@@ -11,7 +11,7 @@
   boot = {
     initrd = {
       luks.devices."nix-enc" = {
-        device = "/dev/disk/by-uuid/b6a6dca9-47ef-4234-b2eb-fbdebdd6b88d"; #/dev/nvme0n1p3 (blkid)
+        device = "/dev/disk/by-uuid/a30be4f9-c2cf-43d1-99f6-5d37a61bdbef"; #/dev/nvme0n1p3 (blkid)
         preLVM = true;
         allowDiscards = true;  
       };
@@ -34,12 +34,12 @@
   };
 
   fileSystems."/" =
-    { device = "rpool/root/nixos";
+    { device = "zroot/root/nixos";
       fsType = "zfs";
     };
 
   fileSystems."/home" =
-    { device = "rpool/home";
+    { device = "zroot/home";
       fsType = "zfs";
     };
 

@@ -75,8 +75,8 @@ installation(){
 
   print_error "Wiping out all the data and signatures of the choosen disk (${device})..."
 
-  #wipefs --all -f "${device}"
-  sgdisk --zap-all "${device}"
+  wipefs --all -f "${device}"
+  #sgdisk --zap-all "${device}"
 
   print_info "Done!"
   print_info "Starting partitioning of ${device} ..."

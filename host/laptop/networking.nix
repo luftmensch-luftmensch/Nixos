@@ -8,7 +8,7 @@
 {
   networking = {
     hostName = "PC"; # Define your hostname.
-    hostId = "64ca071a"; # Define your hostname.
+    hostId = "aad2e762"; # Define your hostname.
     networkmanager.enable = true;  # Enables Network Manager
     #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
