@@ -14,6 +14,9 @@
         device = "/dev/disk/by-uuid/a30be4f9-c2cf-43d1-99f6-5d37a61bdbef"; #/dev/nvme0n1p3 (blkid)
         preLVM = true;
         allowDiscards = true;  
+        keyFileSize = 4096;
+        keyFile = "/dev/disk/by-id/usb-_TOSHIBA_USB_MEM_076C14A207E3-0:0";
+        fallbackToPassword = true;
       };
 
       availableKernelModules = [ "nvme" "ehci_pci" "xhci_pci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
