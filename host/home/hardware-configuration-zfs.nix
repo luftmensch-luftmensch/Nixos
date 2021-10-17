@@ -16,7 +16,7 @@
         preLVM = true;
         allowDiscards = true;  
         keyFileSize = 4096;
-        keyFile = "/dev/disk/by-id/usb-Generic_Flash_Disk-0:0";
+        keyFile = "/dev/disk/by-id/usb-Generic_Flash_Disk_DA9B8538-0:0";
         fallbackToPassword = true;
       };
 
