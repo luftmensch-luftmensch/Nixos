@@ -15,9 +15,9 @@
         device = "/dev/disk/by-uuid/46b20344-1197-486a-a20a-50b3842ba2cd"; #/dev/sda3 (blkid)
         preLVM = true;
         allowDiscards = true;  
-        #keyFileSize = 4096;
-        #keyFile = "/dev/disk/by-id/usb-Generic_Flash_Disk_DA9B8538-0:0";
-        #fallbackToPassword = true;
+        keyFileSize = 4096;
+        keyFile = "/dev/disk/by-id/usb-Generic_Flash_Disk-0:0";
+        fallbackToPassword = true;
       };
 
       availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "ums_realtek" "usbhid" "usb_storage" "sd_mod" ];   
