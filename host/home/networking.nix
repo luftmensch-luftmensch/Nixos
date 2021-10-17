@@ -3,6 +3,7 @@
   
   networking = {
     hostName = "home"; # Define your hostname.
+    hostId = "b7435034"; # Define your hostname.
     networkmanager.enable = true;  # Enables Network Manager
     #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
