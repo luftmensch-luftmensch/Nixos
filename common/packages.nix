@@ -7,8 +7,10 @@ let
     imv
     libreoffice
     linuxPackages.cpupower
+    parcellite # Substitute of clipman
     plymouth # enable also the boot option
 
+    # QEMU
     edk2
     libvirt
     OVMF
@@ -59,7 +61,7 @@ in
     ### D ###
     #dbeaver # A better alternative to PGAdmin
     discord
-    devour # Enable terminal swallowing (used for zathura)
+    #devour # Enable terminal swallowing (used for zathura)
     #dropbox
     #dropbox-cli
     dunst
@@ -73,11 +75,10 @@ in
     feh
     firefox
     filezilla
-    #firebird
     ffmpeg
     fish
     #foliate # Minimal E-Book reader
-    fortune
+    #fortune
     #freetube # FOSS private YT app
 
     ### G ###
@@ -118,7 +119,7 @@ in
     ### M ###
     materia-theme
     #mkpasswd # Generates passwords and can apply them automatically to users
-    mpg123 # Used for dunst sound notifications
+    #mpg123 # Used for dunst sound notifications
     mpv
     mu
 
@@ -143,7 +144,6 @@ in
     pamixer # Used in i3
     pandoc
     papirus-icon-theme
-    parcellite # Substitute of clipman
     pavucontrol
     pcmanfm
     picom
@@ -179,7 +179,7 @@ in
     #teamviewer
     teams
     tdesktop
-    telnet
+    #telnet
     #termite # substituted with kitty
     thunderbird
 
