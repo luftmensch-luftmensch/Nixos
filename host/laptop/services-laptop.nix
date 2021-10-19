@@ -2,9 +2,9 @@
 { lib, config, pkgs, ... }:
 {
   services = {
-    autorandr = {
-      enable = true; 
-    };
+    #autorandr = {
+    #  enable = true; 
+    #};
 
     logind = {
       lidSwitch = "suspend"; #don't suspend when lid is closed (other options are poweroff reboot hatl kexec suspend hibernate hybrid-sleep suspend-then-hiberante lock)
