@@ -37,8 +37,8 @@ in
     androidStudioPackages.dev
     #anydesk
     #ark
-    aspell
-    aspellDicts.it
+    #aspell
+    #aspellDicts.it
     autotiling
     #appimage-run
 
@@ -94,6 +94,10 @@ in
     ### H ###
     #haskellPackages.greenclip
     htop
+
+    # Spell checking for flyspell
+    huspell
+    huspellDicts.it_IT
 
     ### J ###
     #jetbrains.idea-community
