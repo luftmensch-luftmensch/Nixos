@@ -9,6 +9,7 @@ let
     linuxPackages.cpupower
     parcellite # Substitute of clipman
     plymouth # enable also the boot option
+    vimHugeX # vim with X clipboard
 
     # QEMU
     edk2
@@ -22,6 +23,7 @@ let
     autorandr # manage multiple screen
     brightnessctl # manage brightness
     emacsPgtkGcc # emacs 28 with Pgtk + Gcc
+    neovim
     pulseaudio
     touchegg # Waiting for the latest release -> now using an overlay
   ];
@@ -96,8 +98,8 @@ in
     htop
 
     # Spell checking for flyspell
-    huspell
-    huspellDicts.it_IT
+    hunspell
+    hunspellDicts.it_IT
 
     ### J ###
     #jetbrains.idea-community
@@ -199,7 +201,6 @@ in
 
     ### V ###
     #vault # (bitwarden alternative)
-    vimHugeX # vim with X clipboard
     #viewnior
     #virt-viewer 
     #openvpn wireguard # VPN Stuff
