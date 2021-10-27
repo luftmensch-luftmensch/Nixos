@@ -1,6 +1,8 @@
 { pkgs, lib, config, ... }:
 let
-  user_pkgs = with pkgs; if (config.networking.hostName == "home") then[
+  user_pkgs = with pkgs; if (config.networking.hostName == "home") then [
+    betterdiscordctl
+    discord
     dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
     emacs
     gimp-with-plugins
@@ -47,7 +49,6 @@ in
     ### B ###
     bat
     #bc
-    betterdiscordctl
     #betterlockscreen
     bitwarden #bitwarden-cli
     bluez
@@ -62,7 +63,6 @@ in
 
     ### D ###
     #dbeaver # A better alternative to PGAdmin
-    discord
     #devour # Enable terminal swallowing (used for zathura)
     #dropbox
     #dropbox-cli
