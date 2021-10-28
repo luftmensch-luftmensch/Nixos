@@ -2,6 +2,9 @@
 
 {
   programs = {
+    adb = {
+      enable = true;
+    };
     bash = {
       enableCompletion = true;
     };

@@ -12,6 +12,7 @@
       "scanner"
       "lp"
       "libvirtd"
+      "adbusers"
       # "vboxusers"
     ];
     #shell = pkgs.fish;
