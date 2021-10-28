@@ -37,9 +37,11 @@
     #};
     #postgresql = {
     #  enable = true;
-    #  package = pkgs.postgresql_12;
+    #  package = pkgs.postgresql_13;
     #  authentication = ''
     #    local all   postgres       peer  map=eroot
+    #    local all all trust   
+    #    host all all localhost trust   
     #  '';
     #  identMap = ''
     #    eroot     root      postgres
