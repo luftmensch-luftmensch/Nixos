@@ -1,72 +1,76 @@
 { lib, config, pkgs, ... }:
-{
 
-  ### NIXPKGS OVERLAYS ###
-  nixpkgs.overlays = [
-    (self: super:
-      {
-        touchegg = super.touchegg.overrideAttrs (old: rec {
-          version = "2.0.9";
+let 
+    emacsSHA = "12c7yjciqixjl3v8n46gipv4f4bn3wwrvpv4lcjf21w3jdv3yn8s";
+  in {
 
-          src = super.fetchzip {
-            url = "https://github.com/JoseExposito/touchegg/archive/${version}.zip";
-            sha256 = "sha256-dIUAN65grsFiCF1iDI2hDJQUtLmXxJ/1qAl/55NzRc0=";
-          };
+    ### NIXPKGS OVERLAYS ###
+    nixpkgs.overlays = [
+      (self: super:
+        {
+          touchegg = super.touchegg.overrideAttrs (old: rec {
+            version = "2.0.9";
 
-          PKG_CONFIG_SYSTEMD_SYSTEMDSYSTEMUNITDIR = "${placeholder "out"}/lib/systemd/system";
+            src = super.fetchzip {
+              url = "https://github.com/JoseExposito/touchegg/archive/${version}.zip";
+              sha256 = "sha256-dIUAN65grsFiCF1iDI2hDJQUtLmXxJ/1qAl/55NzRc0=";
+            };
 
-          buildInputs = with super; [
-            systemd
-            libinput
-            pugixml
-            cairo
-            gtk3-x11
-            pcre
-          ] ++ (with xorg; [
-            libX11
-            libXtst
-            libXrandr
-            libXi
-            libXdmcp
-            libpthreadstubs
-            libxcb
-          ]);
+            PKG_CONFIG_SYSTEMD_SYSTEMDSYSTEMUNITDIR = "${placeholder "out"}/lib/systemd/system";
 
-          nativeBuildInputs = with super; [ pkg-config cmake ];
+            buildInputs = with super; [
+              systemd
+              libinput
+              pugixml
+              cairo
+              gtk3-x11
+              pcre
+            ] ++ (with xorg; [
+              libX11
+              libXtst
+              libXrandr
+              libXi
+              libXdmcp
+              libpthreadstubs
+              libxcb
+            ]);
 
-          preConfigure = "";
-        });
-      })
-    (import (builtins.fetchTarball {
-      url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
-      sha256 = "0plsrf8584xynfhbf2c73gjfb84pi8f0dv0m783kmhyq7xsa7cp1";
+            nativeBuildInputs = with super; [ pkg-config cmake ];
 
-    }))
+            preConfigure = "";
+          });
+        })
+      (import (builtins.fetchTarball {
+        url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
+        #sha256 = "0plsrf8584xynfhbf2c73gjfb84pi8f0dv0m783kmhyq7xsa7cp1";
+        sha256 = "${emacsSHA}";
 
-  ];
+      }))
 
-  systemd.services.touchegg = {
-    enable = true;
-    description = "Touchégg. The daemon.";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      Type = "simple";
-      Group = "input";
-      Restart = "on-failure";
-      RestartSec = 5;
-      ExecStart = "${pkgs.touchegg}/bin/touchegg --daemon";
+    ];
+
+    systemd.services.touchegg = {
+      enable = true;
+      description = "Touchégg. The daemon.";
+      wantedBy = [ "multi-user.target" ];
+      serviceConfig = {
+        Type = "simple";
+        Group = "input";
+        Restart = "on-failure";
+        RestartSec = 5;
+        ExecStart = "${pkgs.touchegg}/bin/touchegg --daemon";
+      };
     };
-  };
-  systemd.user.services.touchegg-client = {
-    description = "Touchégg. The client.";
+    systemd.user.services.touchegg-client = {
+      description = "Touchégg. The client.";
 
-    wantedBy = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
+      wantedBy = [ "graphical-session.target" ];
+      partOf = [ "graphical-session.target" ];
 
-    serviceConfig = {
-      Restart = "on-failure";
-      ExecStart = "${pkgs.touchegg}/bin/touchegg";
+      serviceConfig = {
+        Restart = "on-failure";
+        ExecStart = "${pkgs.touchegg}/bin/touchegg";
+      };
     };
-  };
-  
-}
+  } 
+
