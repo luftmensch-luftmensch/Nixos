@@ -5,7 +5,8 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    videoDrivers = [ "modesetting" "nvidia"];
+    #videoDrivers = [ "nvidia"];
+    videoDrivers = [ "nouveau"];
     displayManager= {
       sddm.enable = true;
       sddm.theme = "${(pkgs.fetchFromGitHub { #theme = "personal-theme" 

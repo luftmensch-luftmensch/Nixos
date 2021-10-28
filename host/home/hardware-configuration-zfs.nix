@@ -29,6 +29,8 @@
     extraModulePackages = [ ];
     supportedFilesystems = [ "zfs" ];
 
+    kernelPackages = pkgs.linuxPackages_latest;
+    zfs.enableUnstable = true; # enable it when using the latest kernel
 
   };
 
