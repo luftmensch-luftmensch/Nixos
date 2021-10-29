@@ -10,8 +10,16 @@ let
     libreoffice
     linuxPackages.cpupower
     parcellite # Substitute of clipman
+    picom
+    polybarFull
     plymouth # enable also the boot option
     vimHugeX # vim with X clipboard
+
+    xorg.xev
+    xorg.xkill
+    xorg.xrdb
+    xss-lock
+    teams
 
     # QEMU
     edk2
@@ -41,8 +49,7 @@ in
     androidStudioPackages.dev
     #anydesk
     #ark
-    #aspell
-    #aspellDicts.it
+    #aspell aspellDicts.it
     autotiling
     #appimage-run
 
@@ -58,7 +65,7 @@ in
 
     ### C ###
     capitaine-cursors
-    # carla
+    #carla
     #colorpicker
 
     ### D ###
@@ -106,7 +113,7 @@ in
 
     ### K ###
     #kdenlive
-    killall
+    #killall
     kitty
 
     ### I ###
@@ -152,10 +159,8 @@ in
     papirus-icon-theme
     pavucontrol
     pcmanfm
-    picom
-    polybarFull
     poppler 
-    #postgresql_12
+    #postgresql_13
     #postman
     #progress
     #pulseaudio
@@ -183,7 +188,6 @@ in
 
     ### T ###
     #teamviewer
-    teams
     tdesktop
     #telnet
     #termite # substituted with kitty
@@ -214,17 +218,11 @@ in
     xclip
     xdg-user-dirs
     xdotool
-    #xfce.xfce4-clipman-plugin # Substituted with parcellite
     xfce.xfce4-screenshooter
     xfce.thunar # Need xfce.tumbler
     xfce.thunar-archive-plugin
     #xfce.thunar-volman # automatic management of removable drives and media
     xfce.tumbler
-    xorg.xev
-    xorg.xkill
-    xorg.xrdb
-    xss-lock
-
 
     ### Y ###
     youtube-dl

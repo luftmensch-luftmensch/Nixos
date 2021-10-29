@@ -8,6 +8,7 @@
         enable = true;
         configurationLimit = 10; # Maximum number of latest generations in the boot menu
         editor = false; # Fix a security hole in place for backwards compatibility (permit sudo privileges when booting)
+        #consoleMode = "max";
       };
       efi = {
         canTouchEfiVariables = true;
@@ -43,7 +44,6 @@
       enable = true;
     #  theme = "breeze";
     };
-    #kernelPackages = pkgs.linuxPackages_latest;
     #kernel = {
     #  sysctl."vm.swappiness" = 0; # or 1
     #  sysctl."kernel/sysrq" = 1;
