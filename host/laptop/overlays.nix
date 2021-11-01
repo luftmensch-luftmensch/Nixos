@@ -1,8 +1,8 @@
 { lib, config, pkgs, ... }:
 
 let 
-    #emacsSHA = "12c7yjciqixjl3v8n46gipv4f4bn3wwrvpv4lcjf21w3jdv3yn8s";
-    emacsSHA = "0rinkncpz8f4qr1jljm15fxkk38z754b5hnlj2blcjr4971j2w4g";
+    #emacsSHA = "0rinkncpz8f4qr1jljm15fxkk38z754b5hnlj2blcjr4971j2w4g";
+    emacsSHA = "0z4cgc3f2rn2dyw0abp4nm31plxnlzyrvi0k8blrn6ncfp5pp3pi";
 
   in {
 
