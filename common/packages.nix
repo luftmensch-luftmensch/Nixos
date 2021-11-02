@@ -158,7 +158,7 @@ in
     pandoc
     papirus-icon-theme
     pavucontrol
-    pcmanfm
+    #pcmanfm
     poppler 
     #postgresql_13
     #postman
