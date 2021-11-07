@@ -2,6 +2,7 @@
 
 let 
     emacsSHA = "0z4cgc3f2rn2dyw0abp4nm31plxnlzyrvi0k8blrn6ncfp5pp3pi";
+    emacsSHA = "10nvdrzplpwqwa4z5c5kg2a6rwpna1x238sas2apdr4snvn7nf2l"; # New sha
 
   in {
 
