@@ -11,6 +11,7 @@
       intel.updateMicrocode = true;
     };
 
+    nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
     opengl = {
       extraPackages = with pkgs; [ vaapiVdpau libvdpau-va-gl ];
     };
