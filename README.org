@@ -1,11 +1,11 @@
-#+Title: My personal Nixos configuration with flakes
-#+Author: Valentino Bocchetti
+#+OPTIONS: date:nil title:nil toc:nil author:nil
 #+STARTUP: overview
-
-* Table of contents :toc:
+* My personal Nixos configuration with flakes
+[[https://github.com/conao3/leaf.el/blob/master/LICENSE][https://img.shields.io/github/license/conao3/leaf.el.svg?style=flat-square]]
+[[https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=flat-square&logo=NixOS&logoColor=white][NixOS-version]]
+* Table of contents
 - [[#about][About]]
 - [[#quick-start][Quick start]]
-
 * About
 The entire system configuration is written in Nix. It is composed of a host specific configuration ([[file:host/home/][home]] & [[file:host/laptop/][laptop]]) that includes stuff  specific for my different hosts; a [[file:common/][common]] directory containing shared config files between all my machines, and a [[file:cachix/][cachix]] directory in order to make less expensive switching to a new generation ([[https://app.cachix.org/cache/nix-community][Installation guide]]).
 
