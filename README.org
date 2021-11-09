@@ -2,7 +2,7 @@
 #+STARTUP: overview
 * My personal Nixos configuration with flakes
 [[https://github.com/conao3/leaf.el/blob/master/LICENSE][https://img.shields.io/github/license/conao3/leaf.el.svg?style=flat-square]]
-[[https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=flat-square&logo=NixOS&logoColor=white][NixOS-version]]
+[[https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=flat-square&logo=NixOS&logoColor=white][https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=flat-square&logo=NixOS&logoColor=white]]
 * Table of contents
 - [[#about][About]]
 - [[#quick-start][Quick start]]
