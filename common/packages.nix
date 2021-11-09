@@ -51,7 +51,7 @@ in
     #ark
     #aspell aspellDicts.it
     autotiling
-    #appimage-run
+    appimage-run
 
     ### B ###
     bat
