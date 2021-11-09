@@ -37,21 +37,21 @@
       };
       folders = {
         "Music" = {
-         path = "/home/valentino/Music";
-         id = "n4gcw-3q7u5";
-         devices = [ "home" ]; # home
+          path = "/home/valentino/Music";
+          id = "n4gcw-3q7u5";
+          devices = [ "home" ]; # home
         };
 
         "Dropbox" = {
-         path = "/home/valentino/Dropbox";
-         id = "tcfun-ya2ir";
-         devices = [ "P30-PRO" "home" ]; # Multiple devices
+          path = "/home/valentino/Dropbox";
+          id = "tcfun-ya2ir";
+          devices = [ "P30-PRO" "home" ]; # Multiple devices
         };
 
         "Video" = {
-         path = "/home/valentino/Video";
-         id = "tzf49-nwpwz";
-         devices = [ "home" ]; # home
+          path = "/home/valentino/Video";
+          id = "tzf49-nwpwz";
+          devices = [ "home" ]; # home
         };
         
       };
@@ -86,21 +86,6 @@
         #PCIE_ASPM_ON_AC = default;
         #PCIE_ASPM_ON_BAT = default;
         #USB_AUTOSUSPEND = 0;
-      };
-    };
-
-    zfs = {
-      trim = {
-        enable = true;
-      };
-
-      #autoSnapshot = {
-      #  enable = true;
-      #};
-
-      autoScrub = {
-        enable = true;
-        #interval = "weekly";
       };
     };
     

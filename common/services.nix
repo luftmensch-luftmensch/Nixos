@@ -6,7 +6,7 @@
     #  enable = true;
     #};
     flatpak = {
-	    enable = true;
+      enable = true;
     };
     #fprintd = {
     #  enable = true;
@@ -14,7 +14,7 @@
     # prendi config da ~/config/nixos/fprint
     #};
     #greenclip = {
-	  #  enable = true;
+    #  enable = true;
     #};
     #hardware = {
     #  bolt.enable = true; 
@@ -78,18 +78,34 @@
         ACTION=="add", SUBSYSTEMS=="usb", SUBSYSTEM=="block", ENV{ID_FS_USAGE}=="filesystem", RUN{program}+="${pkgs.systemd}/bin/systemd-mount --no-block --automount=yes --collect $devnode /media"       
     '';
 
-    #Autosuspend usb
-    #ACTION=="add", SUBSYSTEM=="usb", ATTR{power/control}="auto"
-    #ACTION=="add", SUBSYSTEM=="usb", TEST=="power/autosuspend" ATTR{power/autosuspend}="120"
-      
+      #Autosuspend usb
+      #ACTION=="add", SUBSYSTEM=="usb", ATTR{power/control}="auto"
+      #ACTION=="add", SUBSYSTEM=="usb", TEST=="power/autosuspend" ATTR{power/autosuspend}="120"
     };
+
     #teamviewer = {
     #  enable = true;
-	  #};
+    #};
 
     #udiskie = {
     # enable = true; 
     #};
+
+    zfs = {
+      trim = {
+        enable = true;
+      };
+
+      #autoSnapshot = {
+      #  enable = true;
+      #};
+
+      autoScrub = {
+        enable = true;
+        #interval = "weekly";
+      };
+    };
+
   };
-  
+
 }
