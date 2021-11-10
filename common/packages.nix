@@ -107,6 +107,7 @@ in
     # Spell checking for flyspell
     hunspell
     hunspellDicts.it_IT
+    hunspellDicts.en_US
 
     ### J ###
     #jetbrains.idea-community
