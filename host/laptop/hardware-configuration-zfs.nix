@@ -15,7 +15,7 @@
         preLVM = true;
         allowDiscards = true;  
         keyFileSize = 4096;
-        keyFile = "/dev/disk/by-id/usb-_TOSHIBA_USB_MEM_076C14A207E3-0:0";
+        keyFile = "/dev/disk/by-id/usb-Innostor_Innostor_ALF3DAEARV00000001519-0:0";
         fallbackToPassword = true;
       };
 
