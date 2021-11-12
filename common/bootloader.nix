@@ -9,6 +9,7 @@
         configurationLimit = 10; # Maximum number of latest generations in the boot menu
         editor = false; # Fix a security hole in place for backwards compatibility (permit sudo privileges when booting)
         #consoleMode = "max";
+        #memtest86.enable = true;
       };
       efi = {
         canTouchEfiVariables = true;
