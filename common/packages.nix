@@ -30,7 +30,7 @@ let
 
   ] else [
     acpi # information about battery
-    autorandr # manage multiple screen
+    #autorandr # manage multiple screen (Xorg)
     brightnessctl # manage brightness
     emacsPgtkGcc # emacs 28 with Pgtk + Gcc
     neovim
@@ -39,7 +39,6 @@ let
   ];
 in
 {
-
   environment.systemPackages = with pkgs; [
     # Cli programs 
 
@@ -180,7 +179,7 @@ in
     scrot
     speedtest-cli
     spotify
-    sshpass
+    #sshpass
     #steam steam-run-native # Gaming
 
     #stow  # (TODO try it!)
