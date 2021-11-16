@@ -7,7 +7,7 @@
     videoDrivers = ["amdgpu"];
     displayManager= {
       sddm.enable = true;
-      sddm.theme = "${(pkgs.fetchFromGitHub { #theme = "personal-theme" 
+      sddm.theme = "${(pkgs.fetchFromGitHub { # personal theme
         owner = "luftmensch-luftmensch";
         repo = "sddm-theme";
         rev = "d2592ac1ec9db93d3b12575c0386e53ba324529c";
@@ -21,11 +21,6 @@
         enable = true;
         package = pkgs.i3-gaps;
       };
-
-      #qtile = {
-      #  enable = true;
-      #};
-
     };
     layout = "it";
     libinput = {

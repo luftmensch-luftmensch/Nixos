@@ -8,7 +8,7 @@
 {
   networking = {
     hostName = "PC"; # Define your hostname.
-    hostId = "aad2e762"; # Define your hostname.
+    hostId = "aad2e762"; # Define your hostId (take the value with head -c 8 /etc/machine-id)
     networkmanager.enable = true;  # Enables Network Manager
     #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

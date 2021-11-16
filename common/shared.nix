@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 {
   
-  xdg.portal.enable = true; # Flatpak
+  #xdg.portal.enable = true; # Flatpak
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

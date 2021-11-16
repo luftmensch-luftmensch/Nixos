@@ -24,6 +24,9 @@
     ## TCP hardening
     # Prevent bogus ICMP errors from filling up logs.
     "net.ipv4.icmp_ignore_bogus_error_responses" = 1;
+
+    #"net.ipv4.icmp_echo_ignore_broadcasts" = 1; # Refuse ICMP echo requests on my desktop/laptop; nobody has any business  pinging them, unlike my servers.
+
     # Reverse path filtering causes the kernel to do source validation of
     # packets received from all interfaces. This can mitigate IP spoofing.
     "net.ipv4.conf.default.rp_filter" = 1;
@@ -41,6 +44,9 @@
     "net.ipv4.conf.default.secure_redirects" = 0;
     "net.ipv6.conf.all.accept_redirects" = 0;
     "net.ipv6.conf.default.accept_redirects" = 0;
+
+    #"net.ipv6.conf.all.use_tempaddr" = 2;
+
     # Protects against SYN flood attacks
     "net.ipv4.tcp_syncookies" = 1;
     # Incomplete protection again TIME-WAIT assassination
@@ -54,6 +60,9 @@
     # Bufferbloat mitigations + slight improvement in throughput & latency
     "net.ipv4.tcp_congestion_control" = "bbr";
     "net.core.default_qdisc" = "cake";
+
+    #"vm.swappiness" = 0; # or 1
+
   };
 
   # sudo & doas

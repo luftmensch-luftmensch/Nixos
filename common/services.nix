@@ -5,9 +5,9 @@
     #chrony = {
     #  enable = true;
     #};
-    flatpak = {
-      enable = true;
-    };
+    #flatpak = {
+    #  enable = true;
+    #};
     #fprintd = {
     #  enable = true;
     #  package = (pkgs.callPackage ./fprint/fprintd.nix { });

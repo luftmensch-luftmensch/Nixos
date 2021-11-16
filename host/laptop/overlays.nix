@@ -1,8 +1,8 @@
 { lib, config, pkgs, ... }:
 
 let 
-    #emacsSHA = "0rvc7aqswn6phfgmc8hhf0ap9j8bb3627nv43kcmhzs67qs4qcyb";
-    emacsSHA = "1za2nhp2176i8761id9fqalzzd9x21351lbchi3nymf7v7655s7m"; # New SHA
+    emacsSHA = "1pd6slvvixhmf3gs2d5i7nlrxsvn9y7lji675ym85qlcblp74l3k";
+    #emacsSHA = "";
   in {
 
     ### NIXPKGS OVERLAYS ###
@@ -43,7 +43,6 @@ let
         })
       (import (builtins.fetchTarball {
         url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
-        #sha256 = "0plsrf8584xynfhbf2c73gjfb84pi8f0dv0m783kmhyq7xsa7cp1";
         sha256 = "${emacsSHA}";
 
       }))

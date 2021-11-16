@@ -13,7 +13,7 @@
       "lp"
       "libvirtd"
       "adbusers"
-      # "vboxusers"
+      #"vboxusers"
     ];
     #shell = pkgs.fish;
   };
