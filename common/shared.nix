@@ -1,7 +1,16 @@
 { lib, config, pkgs, ... }:
 {
   
-  xdg.portal.enable = true;
+  xdg = {
+    portal = {
+      enable = true;
+      #extraPortals = with pkgs; [
+      #  xdg-desktop-portal-wlr
+      #  xdg-desktop-portal-gtk
+      #];
+      #gtkUsePortal = true;
+    };
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
