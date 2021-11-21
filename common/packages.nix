@@ -4,7 +4,8 @@ let
     #betterdiscordctl
     #discord
     dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
-    emacs
+    #emacs
+    emacsPgtkGcc
     gimp-with-plugins
     imv
     libreoffice
