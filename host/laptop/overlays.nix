@@ -1,7 +1,8 @@
 { lib, config, pkgs, ... }:
 
 let 
-    emacsSHA = "18hm44cyqsc6lan54aaw9zf2s9b41myzlar3n8svs8w80maimcjb";
+    #emacsSHA = "18hm44cyqsc6lan54aaw9zf2s9b41myzlar3n8svs8w80maimcjb";
+    emacshSHA = "1fbz0j33f51sap44jc4w5p6r88gsiy89h5j412k31vb91a54fys3";
   in {
 
     ### NIXPKGS OVERLAYS ###
