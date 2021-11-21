@@ -10,7 +10,7 @@
     ./locales.nix # Timezone and locales
     ./nix.nix # Nix package manager configuration & extras
     ./overrides.nix # dmenu patches
-    #./overlays.nix # Enable it when discord needs to update
+    ./overlays.nix # Emacs 29
     ./packages.nix # Global packages
     ./programs.nix # Global programs
     ./security.nix 

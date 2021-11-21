@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 {
 
-  ### NIXPKGS OVERLAYS ###
+  ### NIXPKGS OVERLAYS - EMACS ###
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
       url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
