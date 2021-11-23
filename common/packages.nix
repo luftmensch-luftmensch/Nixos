@@ -20,7 +20,7 @@ let
     xorg.xkill
     xorg.xrdb
     xss-lock
-    teams
+    #teams
 
     # QEMU
     edk2
