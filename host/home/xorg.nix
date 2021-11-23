@@ -24,9 +24,9 @@
         enable = true;
         package = pkgs.i3-gaps;
       };
-      qtile = {
-        enable = true;
-      };
+      #qtile = {
+      #  enable = true;
+      #};
     };
 
     layout = "it";
