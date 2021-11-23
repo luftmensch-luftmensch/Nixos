@@ -84,10 +84,6 @@
       #ACTION=="add", SUBSYSTEM=="usb", TEST=="power/autosuspend" ATTR{power/autosuspend}="120"
     };
 
-    #teamviewer = {
-    #  enable = true;
-    #};
-
     #udiskie = {
     # enable = true; 
     #};

@@ -3,7 +3,7 @@
 {
   programs = {
     adb = {
-      enable = true;
+      enable = true; # Needed for Android Studio
     };
     bash = {
       enableCompletion = true;

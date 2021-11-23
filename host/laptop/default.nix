@@ -4,7 +4,7 @@
   imports = [
     # Handy way to make flake.nix less ripetitive
     ./hardware.nix # hardware options
-    #./hardware-configuration-ext4.nix # Pretty obvious right?
+    #./hardware-configuration-ext4.nix # Moved to zfs (Used only as reference now)
     ./hardware-configuration-zfs.nix # Pretty obvious right?
     ./networking.nix # Networking option
     ./overlays.nix # Touchegg + systemd services (+ emacs, currrently disabled)

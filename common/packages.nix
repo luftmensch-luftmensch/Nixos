@@ -5,7 +5,6 @@ let
     #discord
     dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
     #emacs
-    emacsPgtkGcc
     gimp-with-plugins
     imv
     libreoffice
@@ -14,13 +13,14 @@ let
     picom
     polybarFull
     plymouth # enable also the boot option
+    scrot # Screenshot utility on Xorg
     vimHugeX # vim with X clipboard
 
     xorg.xev
     xorg.xkill
     xorg.xrdb
     xss-lock
-    #teams
+    xfce.xfce4-screenshooter
 
     # QEMU
     edk2
@@ -33,7 +33,6 @@ let
     acpi # information about battery
     #autorandr # manage multiple screen (Xorg)
     brightnessctl # manage brightness
-    emacsPgtkGcc # emacs 28 with Pgtk + Gcc
     neovim
     pulseaudio
     touchegg # Waiting for the latest release -> now using an overlay
@@ -49,8 +48,8 @@ in
     androidStudioPackages.dev
     #anydesk
     #ark
-    #aspell aspellDicts.it
-    autotiling
+    #aspell aspellDicts.it # (moved to hunspell)
+    autotiling # Manual to dynamic TWM (i3/sway)
     appimage-run
 
     ### B ###
@@ -76,7 +75,7 @@ in
     dunst
     
     ### E ###
-    #emacsPgtkGcc # enable first the overlay!
+    emacsPgtkGcc # Needed an overlay for this! (emacs 29 with Pgtk + Gcc)
     exa
     exiftool # Used for emms
 
@@ -141,9 +140,7 @@ in
     #neovim
     #netbeans
     networkmanagerapplet
-    #nodejs-16_x
-    #nodePackages."@vue/cli"
-    #nodePackages.npm
+    #nodejs-16_x nodePackages."@vue/cli" # (Used at work, not used atm)
     #nvtop
 
     #ncdu # like du but interactive
@@ -151,7 +148,7 @@ in
     ### O ###
     obs-studio
     #onedrive
-    #openvpn # VPN
+    #openvpn # VPN -> check also about service
     openssl
 
     ### P ###
@@ -177,7 +174,6 @@ in
     rofi
 
     ### S ###
-    scrot
     speedtest-cli
     spotify
     #sshpass
@@ -191,14 +187,13 @@ in
     #teamviewer
     tdesktop
     #telnet
-    #termite # substituted with kitty
-    thunderbird
+    thunderbird # Email client
 
     texlive.combined.scheme-full
 
     ### U ###
     #udiskie #(udisks2 frontend)
-    ueberzug
+    ueberzug # (Needed for ranger - Work only on Xorg)
     #unrar
     unzip
     #usbguard # Protect against infected USB
@@ -219,7 +214,6 @@ in
     xclip
     xdg-user-dirs
     xdotool
-    xfce.xfce4-screenshooter
     xfce.thunar # Need xfce.tumbler
     xfce.thunar-archive-plugin
     #xfce.thunar-volman # automatic management of removable drives and media

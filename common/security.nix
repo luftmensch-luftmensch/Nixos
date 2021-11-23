@@ -67,13 +67,15 @@
 
   # sudo & doas
   security = {
-  #  doas = {
-  #    enable = true;
-  #    extraRules = [{ users = [ "USER" ]; persist = true; keepEnv = true; noPass = true; }];
-  #    
-  #  };
+    #  doas = {
+    #    enable = true;
+    #    extraRules = [{ users = [ "USER" ]; persist = true; keepEnv = true; noPass = true; }];
+    #    
+    #  };
     sudo.wheelNeedsPassword = false;
-    rtkit = { # Whether to enable the RealtimeKit system service, which hands out realtime scheduling priority to user processes on demand. For example, the PulseAudio server uses this to acquire realtime priority. 
+    # Whether to enable the RealtimeKit system service, which hands out realtime scheduling priority to user processes on demand.
+    # For example, the PulseAudio server uses this to acquire realtime priority. 
+    rtkit = { 
       enable = true; # Recommended for pipewire
     };
   };
