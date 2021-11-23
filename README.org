@@ -20,3 +20,5 @@ A convenience [[file:nix-install.sh][script]] is provided to setup the system on
 7. Reboot!
 8. Change your ~root~ and ~$USER~ passwords!
 9. Enjoy!
+10. [[https://media.giphy.com/media/yJFeycRK2DB4c/giphy.gif]]
+
