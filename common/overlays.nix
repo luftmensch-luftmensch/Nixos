@@ -10,8 +10,8 @@
 
     (import (builtins.fetchTarball {
       url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
-      #sha256 = "09vpgbv78zia5cx8bxypnbpv5mq5qvfa6w64m8z1knyph7113qf3";
-      sha256 = "0719x0dlyah5vz82vz0jivgrz4a98iml5rfqzkmf96ynh502hdh8";
+      #sha256 = "0719x0dlyah5vz82vz0jivgrz4a98iml5rfqzkmf96ynh502hdh8";
+      sha256 = "1qxdf6ahkabjz2a6kd2zicm6qxg41hlb6ahby29lqqyrgj2ab2sb";
     }))
   ];
 }
