@@ -114,6 +114,7 @@ in
     ### K ###
     #kdenlive
     #killall
+    kicad # A Cross Platform and Open Source Electronics Design Automation Suite
     kitty
 
     ### I ###
