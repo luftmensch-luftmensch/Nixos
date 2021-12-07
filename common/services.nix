@@ -13,9 +13,9 @@
     #  package = (pkgs.callPackage ./fprint/fprintd.nix { });
     # prendi config da ~/config/nixos/fprint
     #};
-    #greenclip = {
-    #  enable = true;
-    #};
+    #gpm = {
+    #  enable = true; # Virtual mouse pointer for TTY consoles
+    #}
     #hardware = {
     #  bolt.enable = true; 
     #};
@@ -67,12 +67,14 @@
     #};
 
     # Smartctl daemon
-    #services.smartd = {
-    #  enable = true;
-
+    #smartd = {
+    # enable = true;
     #  notifications.x11.enable = true;
     #};
 
+    #system-config-printer = {
+    #  enable = true;
+    #}
 
     udev = {
       extraRules = ''
@@ -85,6 +87,11 @@
     };
 
     #udiskie = {
+    # enable = true; 
+    #};
+    # udiskctl service to manipulate storage devices.
+    # Mount and unmount without sudo permissions
+    #udisks2 = {
     # enable = true; 
     #};
 
