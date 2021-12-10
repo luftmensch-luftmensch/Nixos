@@ -5,7 +5,8 @@
 
   inputs = {
     #nixpkgs.url = "nixpkgs/nixos-21.05";
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    #nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/nixos-21.11";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     #discord-overlay.url = "github:InternetUnexplorer/discord-overlay";
