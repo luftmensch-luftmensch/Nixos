@@ -75,7 +75,7 @@ in
     dunst
     
     ### E ###
-    #emacsPgtkGcc # Needed an overlay for this! (emacs 29 with Pgtk + Gcc)
+    emacsPgtkGcc # Needed an overlay for this! (emacs 29 with Pgtk + Gcc)
     exa
     exiftool # Used for emms
 
