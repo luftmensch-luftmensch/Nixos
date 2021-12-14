@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 let
   emacsSHA = "11x06z7g6gmd1ypib8hl7awj9iy3az80z2y94vpm3fsxm8vvq86j";
-  neovimSHA = "0000000000000000000000000000000000000000000000000000";
+  neovimSHA = "191kkxbwdyvjfs0y7jmvs29357sgm9938q2hg7486p58za2l2hxp";
 in
 {
 
