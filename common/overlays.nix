@@ -1,4 +1,8 @@
 { lib, config, pkgs, ... }:
+let
+  emacsSHA = "11x06z7g6gmd1ypib8hl7awj9iy3az80z2y94vpm3fsxm8vvq86j";
+  neovimSHA = "0000000000000000000000000000000000000000000000000000"
+in
 {
 
   nixpkgs.overlays = [
@@ -8,11 +12,17 @@
     #  sha256 = "169vamrbk3naviw20ig15206ks45sdldfriyf8imwfjl0s3myc7l";
     #}))
 
+    # Emacs Overlay
     (import (builtins.fetchTarball {
       url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
-      #sha256 = "1pmdwrpcwqa766man1pfz41f2sa8xmlmpxg7g630c11f657sfrbv";
-      #sha256 = "12a9p63m5jbp16ai7mhwib6mbxs92kkpvcmcraizz99gjnw573qv";
-      sha256 = "11x06z7g6gmd1ypib8hl7awj9iy3az80z2y94vpm3fsxm8vvq86j";
+      sha256 = "${emacsSHA}"
     }))
+
+    ## Neovim overlay
+    (import (builtins.fetchTarball {
+      url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+      sha256 = "${neovimSHA}"
+    }))
+
   ];
 }

@@ -9,6 +9,7 @@
     nixpkgs.url = "nixpkgs/nixos-21.11";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
+    neovim-overlay.url = "github:nix-community/neovim-nightly-overlay";
     #discord-overlay.url = "github:InternetUnexplorer/discord-overlay";
   };
 
