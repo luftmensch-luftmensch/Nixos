@@ -1,16 +1,15 @@
 {
+  description = "A collection of crap, hacks and copy-paste to make my localhosts boot";
   #description = "My NixOS configuration";
-  description = "Nixos System configuration";
-  #description = "A collection of crap, hacks and copy-paste to make my localhosts boot";
+  #description = "Nixos System configuration";
 
   inputs = {
-    #nixpkgs.url = "nixpkgs/nixos-21.05";
-    #nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs.url = "nixpkgs/nixos-21.11";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    #nixpkgs.url = "nixpkgs/nixos-21.11";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     neovim-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    #discord-overlay.url = "github:InternetUnexplorer/discord-overlay";
+    #discord-overlay.url = "github:InternetUnexplorer/discord-overlay"; # Leaved as reference
   };
 
   outputs = { nixpkgs, nixos-hardware, ... }: 
