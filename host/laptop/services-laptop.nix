@@ -17,14 +17,14 @@
       #'';
     };
 
-    #pipewire = { # In order to use it you need to set hardware.pulseaudio.enable = false
-    #  enable = true;
-    #  alsa.enable = true;
-    #  alsa.support32Bit = true;
-    #  jack.enable = true;
-    #  pulse.enable = true;
-    #  #lowLatency.enable = true;
-    #};
+    pipewire = { # In order to use it you need to set hardware.pulseaudio.enable = false
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      jack.enable = true;
+      pulse.enable = true;
+      #lowLatency.enable = true;
+    };
 
     syncthing = {
       enable = true;
