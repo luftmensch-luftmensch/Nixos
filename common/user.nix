@@ -11,7 +11,7 @@
       "docker"
       "scanner"
       "lp"
-      "libvirtd"
+      #"libvirtd" # Currently not used -> To enable first comment the relevant part in the virtualisation.nix file
       "adbusers"
       #"vboxusers"
     ];

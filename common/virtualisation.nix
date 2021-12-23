@@ -21,15 +21,15 @@
     # containers = {
     #     registries.search = [ "docker.io" ];
     # };
-    libvirtd = {
-      enable = true;
-      onBoot = "ignore";
-      onShutdown = "shutdown";
-      #qemu = {
-      #  package = pkgs.qemu_kvm;
-      #  ovmf.enable = true;
-      #}
-    };
+    #libvirtd = {
+    #  enable = true;
+    #  onBoot = "ignore";
+    #  onShutdown = "shutdown";
+    #  #qemu = {
+    #  #  package = pkgs.qemu_kvm;
+    #  #  ovmf.enable = true;
+    #  #}
+    #};
     #virtualbox = {
     #  host.enable = true;
     #  enableExtensionPack = true;

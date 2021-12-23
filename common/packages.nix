@@ -50,7 +50,7 @@ in
     #ark
     #aspell aspellDicts.it # (moved to hunspell)
     autotiling # Manual to dynamic TWM (i3/sway)
-    appimage-run
+    #appimage-run
 
     ### B ###
     bat
