@@ -15,9 +15,9 @@
       #driSupport = true;
       extraPackages = with pkgs; [ amdvlk ];
     };
-    pulseaudio = {
-      enable = true;
-    };
+    #pulseaudio = {
+    #  enable = true;
+    #};
     sane = {
       enable = true;
       extraBackends = [ pkgs.epkowa ];
