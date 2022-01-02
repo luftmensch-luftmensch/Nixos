@@ -1,5 +1,7 @@
 { config, lib, ... }:
 
+# security tweaks borrowed from @hlissner
+
 {
   ## System security tweaks
   # sets hidepid=2 on /proc (make process info visible only to owning user)
