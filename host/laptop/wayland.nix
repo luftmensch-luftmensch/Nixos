@@ -24,6 +24,9 @@
       
       waybar # Bar
 
+      #xwayland An X server for interfacing X11 apps with the Wayland protocol
+      #waypipe # A network proxy for Wayland clients (applications)
+
       # Sway relative programs
       swayidle
       swaylock-effects
