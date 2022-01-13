@@ -1,11 +1,8 @@
 { lib, config, pkgs, ... }:
 let
 
-  #emacsSHA = "17dz69i5sqpikzh51ccs99vdvkqibd4v55dg8hl01y708mwhcfpr";
-  #neovimSHA = "1vhjdaq42vf3ppdrwbll65al29a56fvgf0cahjhk9jccbvikw9jg";
-
-  emacsSHA = "0fzsdqq9i3yvl5ayy0gjp748awgmff4ia53bk1rmnz9l7xkbmy9n";
-  neovimSHA = "1l5qa7m4xxr9kxfp9dwcc9i2qf3ncbai6nb3bsz360flgbs90ahk";
+  emacsSHA = "1rs3mpvg7mph4h94bcng24nlcrfgnl3v1il445n50svks15rgwn1";
+  neovimSHA = "181si9b1wjwxlv0axq4gpvk5mdfylp4sz84yswggxc5q51c6m15i";
 
 in
 {
