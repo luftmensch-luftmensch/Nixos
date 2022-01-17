@@ -266,12 +266,12 @@ in
     #minikube
 
     ### VM dependencies ###
-    bridge-utils
-    kvm
-    qemu
-    virt-manager
-    virt-viewer
-    spice-vdagent
+    #bridge-utils
+    #kvm
+    #qemu
+    #virt-manager
+    #virt-viewer
+    #spice-vdagent
 
     ### DISABLED ###
 
