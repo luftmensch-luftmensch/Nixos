@@ -23,9 +23,9 @@ let
     xfce.xfce4-screenshooter
 
     # QEMU
-    edk2
-    libvirt
-    OVMF
+    #edk2
+    #libvirt
+    #OVMF
 
     
 
@@ -69,7 +69,7 @@ in
 
     ### D ###
     #dbeaver # A better alternative to PGAdmin
-    #devour # Enable terminal swallowing (used for zathura)
+    #devour # Enable terminal swallowing (used for zathura) # Only for X11
     #dropbox
     #dropbox-cli
     dunst
@@ -114,7 +114,7 @@ in
     ### K ###
     #kdenlive
     #killall
-    kicad # A Cross Platform and Open Source Electronics Design Automation Suite
+    #kicad # A Cross Platform and Open Source Electronics Design Automation Suite
     kitty
 
     ### I ###
