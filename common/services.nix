@@ -84,6 +84,9 @@
       #Autosuspend usb
       #ACTION=="add", SUBSYSTEM=="usb", ATTR{power/control}="auto"
       #ACTION=="add", SUBSYSTEM=="usb", TEST=="power/autosuspend" ATTR{power/autosuspend}="120"
+
+      # Set noop scheduler for zfs partitions
+      #KERNEL=="sd[a-z]*[0-9]*|mmcblk[0-9]*p[0-9]*|nvme[0-9]*n[0-9]*p[0-9]*", ENV{ID_FS_TYPE}=="zfs_member", ATTR{../queue/scheduler}="none"
     };
 
     #udiskie = {

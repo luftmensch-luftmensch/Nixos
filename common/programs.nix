@@ -2,6 +2,10 @@
 
 {
   programs = {
+    # 0. Plug in phone and make sure it's detected
+    # 1. adb tcpip 5555
+    # 2. Disconnect phone
+    # 3. adb connect [ip]
     adb = {
       enable = true; # Needed for Android Studio
     };
