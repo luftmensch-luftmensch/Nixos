@@ -1,7 +1,7 @@
 #+OPTIONS: date:nil title:nil toc:nil author:nil
 #+STARTUP: overview
 * My personal Nixos configuration with flakes
-[[https://github.com/conao3/leaf.el/blob/master/LICENSE][https://img.shields.io/github/license/conao3/leaf.el.svg?style=flat-square]]
+https://img.shields.io/badge/License-GPL_v3-blue.svg?style=flat-square&color=red
 [[https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=flat-square&logo=NixOS&logoColor=white][https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=flat-square&logo=NixOS&logoColor=white]]
 * Table of contents
 - [[#about][About]]
@@ -20,5 +20,3 @@ A convenience [[file:nix-install.sh][script]] is provided to setup the system on
 7. Reboot!
 8. Change your ~root~ and ~$USER~ passwords!
 9. Enjoy!
-10. [[https://media.giphy.com/media/yJFeycRK2DB4c/giphy.gif]]
-
