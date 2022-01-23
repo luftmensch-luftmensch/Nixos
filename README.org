@@ -1,8 +1,39 @@
 #+OPTIONS: date:nil title:nil toc:nil author:nil
 #+STARTUP: overview
 * My personal Nixos configuration with flakes
-https://img.shields.io/badge/License-GPL_v3-blue.svg?style=flat-square&color=red
-[[https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=flat-square&logo=NixOS&logoColor=white][https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=flat-square&logo=NixOS&logoColor=white]]
+#+BEGIN_HTML
+<div align="center">
+
+  <!-- License -->
+  <a href="https://github.com/luftmensch-luftmensch/Nixos/LICENSE"
+          ><img
+              src="https://img.shields.io/badge/License-GPL_v3-blue.svg?style=for-the-badge&color=red"
+              alt="License"
+      /></a>
+
+  <!-- Nixos Version -->
+  <a href="https://nixos.org/"
+          ><img
+              src="https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white"
+              alt="Nixos Version"
+      />
+
+  <!-- Repository Size -->
+  <a href="https://github.com/luftmensch-luftmensch/Nixos/archive/refs/heads/main.zip"
+          ><img
+              src="https://img.shields.io/github/repo-size/luftmensch-luftmensch/Nixos?style=for-the-badge"
+              alt="GitHub repository size"
+      /></a>
+
+  <!-- Last commit -->
+  <a href="https://github.com/luftmensch-luftmensch/Nixos/commits/main"
+          ><img
+              src="https://img.shields.io/github/last-commit/luftmensch-luftmensch/Nixos?style=for-the-badge"
+              alt="Last commit"
+      /></a>
+
+</div>
+#+END_HTML
 * Table of contents
 - [[#about][About]]
 - [[#quick-start][Quick start]]
