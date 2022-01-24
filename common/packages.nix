@@ -109,7 +109,7 @@ in
     hunspellDicts.en_US
 
     ### J ###
-    #jetbrains.idea-community
+    jetbrains.idea-community
 
     ### K ###
     #kdenlive
@@ -132,6 +132,7 @@ in
 
     ### M ###
     materia-theme
+    maven
     #mkpasswd # Generates passwords and can apply them automatically to users
     #mpg123 # Used for dunst sound notifications
     mpv
