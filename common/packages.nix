@@ -68,7 +68,7 @@ in
     #colorpicker
 
     ### D ###
-    #dbeaver # A better alternative to PGAdmin
+    dbeaver # A better alternative to PGAdmin
     #devour # Enable terminal swallowing (used for zathura) # Only for X11
     #dropbox
     #dropbox-cli
@@ -161,7 +161,7 @@ in
     #pcmanfm
     poppler 
     #postgresql_13
-    #postman
+    postman
     #progress
     #pulseaudio
 
