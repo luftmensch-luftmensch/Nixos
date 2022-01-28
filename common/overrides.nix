@@ -2,7 +2,7 @@
 {
 
   nixpkgs.config = {
-    allowUnfree = true;
+    allowUnfree = true; # Sorry Stallman
     allowBroken = true; # Needed for zfs (marked as broken)
     packageOverrides = pkgs: rec {
       dmenu = pkgs.dmenu.override {
