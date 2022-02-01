@@ -32,9 +32,9 @@
               alt="Last commit"
       /></a>
  <!-- Work on my machine -->
- <a href="https://forthebadge.com/images/badges/works-on-my-machine.svg"
+ <a href="https://img.shields.io/badge/WORKS%20ON-MY%20MACHINE-red?style=for-the-badge"
            ><img
-             src="https://forthebadge.com/images/badges/works-on-my-machine.svg"
+             src="https://img.shields.io/badge/WORKS%20ON-MY%20MACHINE-red?style=for-the-badge"
              alt="Work on my machine"
       /></a>
 </div>
