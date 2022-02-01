@@ -1,6 +1,5 @@
 { lib, config, pkgs, ... }:
 {
-  
   networking = {
     hostName = "home"; # Define your hostname.
     hostId = "b7435034"; # Define your hostname.
@@ -16,11 +15,5 @@
     #proxy.default = "http://user:password@proxy:port/";
     #proxy.noProxy = "127.0.0.1,localhost,internal.domain";   
 
-    # Configure firewall if necessary
-    #firewall = {
-    #  allowedTCPPorts = [ ... ];
-    #  allowedUDPPorts = [ ... ];
-    #  enable = false;
-    #};
   };
 }

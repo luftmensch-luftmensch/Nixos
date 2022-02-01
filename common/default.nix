@@ -6,6 +6,7 @@
     ./bootloader.nix # bootloader options 
     ./cachix.nix # cachix options 
     ./environment.nix # Environment variables + etc configuration
+    ./firewall.nix # Firewall settings
     ./fonts.nix # Fonts configuration
     ./locales.nix # Timezone and locales
     ./nix.nix # Nix package manager configuration & extras

@@ -1,10 +1,4 @@
 { lib, config, pkgs, ... }:
-#let
-#  localRanges = [{
-#    from = 1714;
-#    to = 1764;
-#  }];
-#  in
 {
   networking = {
     hostName = "PC"; # Define your hostname.
@@ -42,5 +36,4 @@
     #  };
     #};
   };
-
 }
