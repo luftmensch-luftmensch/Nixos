@@ -8,6 +8,7 @@
     ./environment.nix # Environment variables + etc configuration
     ./firewall.nix # Firewall settings
     ./fonts.nix # Fonts configuration
+    ./kernel-options.nix # Kernel options + zfs options
     ./locales.nix # Timezone and locales
     ./nix.nix # Nix package manager configuration & extras
     ./overrides.nix # dmenu patches
