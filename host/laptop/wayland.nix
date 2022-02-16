@@ -11,9 +11,11 @@
       #sxiv
       imv
       wl-clipboard
+      wf-recorder # Utility program for screen recording of wlroots-based compositors
       #mako # notification daemon
       #wofi
 
+      foot # Wayland native terminal
       # GTK Theme & Font
       glib 
 
