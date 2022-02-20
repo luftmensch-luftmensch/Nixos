@@ -1,7 +1,8 @@
 { lib, config, pkgs, ... }:
 let
-  emacsSHA = "0yq2h5wcxjnh8j1n6grb75sv8pmmm1pm991250avj4ib7kky1xdd";
-  neovimSHA = "0gv2sg3zgh6bxmx7lvbcx26yvj6za8psqj5249cyi8q1cw2a1dn2";
+  neovimSHA = "0f8rmpkzaa78am37919d8iqhwp4b0p1kk5hxgj8m50isjh1qjimi";
+  emacsSHA = "01pyv8g89cfy9c7iw5krb209j1cn8j79cqqmpc2zgp235aph4wjj";
+  emacsREV = "3204060454868491463e951a7c29947bbe09bc2f.tar.gz";
 in
 {
 
@@ -11,7 +12,7 @@ in
 
     #Emacs overlay
     (import (builtins.fetchTarball{
-      url = "https://github.com/nix-community/emacs-overlay/archive/38122d98f38674d21d1ee16f34006b6fe7195949.tar.gz";
+      url = "https://github.com/nix-community/emacs-overlay/archive/${emacsREV}";
       sha256 = "${emacsSHA}";
     }))
 
