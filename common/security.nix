@@ -64,7 +64,10 @@
     "net.ipv4.tcp_congestion_control" = "bbr";
     "net.core.default_qdisc" = "cake";
 
-    #"vm.swappiness" = 0; # or 1
+    #"vm.swappiness" = 0; # or 10
+    
+    # Intel GPU Analysis
+    #"dev.i915.perf_stream_paranoid" = 0;
 
   };
 

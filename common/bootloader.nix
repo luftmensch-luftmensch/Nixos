@@ -43,9 +43,8 @@
 
     plymouth = {
       enable = true;
-    #  theme = "breeze";
+      #themePackages = [ pkgs.adi1090x-plymouth ];
+      #theme = "lone"; # Other cool theme: "breeze"
     };
-    #cleanTmpDir = true;
-    # consoleLogLevel = 3;
   };
 }
