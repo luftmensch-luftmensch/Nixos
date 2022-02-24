@@ -110,6 +110,7 @@
 
       autoScrub = {
         enable = true;
+        #pools = [ "zroot" ];
         #interval = "weekly";
       };
     };
