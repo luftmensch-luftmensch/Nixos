@@ -10,11 +10,11 @@
       amd.updateMicrocode = true;
     };
 
-    #opengl= {
-    #  #enable = true;
+    opengl= {
+      #enable = true;
     #  #driSupport = true;
-    #  extraPackages = with pkgs; [ amdvlk ];
-    #};
+      extraPackages = with pkgs; [ amdvlk ];
+    };
     #pulseaudio = {
     #  enable = true;
     #};
