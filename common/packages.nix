@@ -188,6 +188,7 @@ in
     tdesktop
     #telnet
     thunderbird # Email client
+    traceroute
 
     texlive.combined.scheme-full
 

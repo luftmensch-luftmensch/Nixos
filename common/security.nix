@@ -17,17 +17,19 @@
   # /tmp ourselves. /tmp should be volatile storage!
   #boot.cleanTmpDir = lib.mkDefault (!config.boot.tmpOnTmpfs);
 
+  # https://github.com/NixOS/nixpkgs/blob/d6fe32c6b9059a054ca0cda9a2bb99753d1134df/nixos/modules/profiles/hardened.nix#L95
   boot.kernel.sysctl = {
     # The Magic SysRq key is a key combo that allows users connected to the
     # system console of a Linux kernel to perform some low-level commands.
     # Disable it, since we don't need it, and is a potential security concern.
-    "kernel.sysrq" = 0;
+    "kernel.sysrq" = 0; # don't allow sysrqs (Magic SysRq is a key combination directly intercepted by the kernel and can be used, among other things, to perform an emergency shutdown)
     #"kernel.printk" = "3 4 3 3"; # don't let logging bleed into TTY
 
     ## TCP hardening
     # Prevent bogus ICMP errors from filling up logs.
     "net.ipv4.icmp_ignore_bogus_error_responses" = 1;
 
+    # Ignore broadcast ICMP (mitigate SMURF)
     #"net.ipv4.icmp_echo_ignore_broadcasts" = 1; # Refuse ICMP echo requests on my desktop/laptop; nobody has any business  pinging them, unlike my servers.
 
     # Reverse path filtering causes the kernel to do source validation of
