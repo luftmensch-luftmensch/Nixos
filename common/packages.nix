@@ -165,7 +165,7 @@ in
 
     ### Q ###
     qt5ct
-    #qrcp
+    qrcp
     qutebrowser
 
     ### R ###
