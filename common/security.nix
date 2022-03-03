@@ -64,7 +64,7 @@
     "net.ipv4.tcp_fastopen" = 3;
     # Bufferbloat mitigations + slight improvement in throughput & latency
     "net.ipv4.tcp_congestion_control" = "bbr";
-    "net.core.default_qdisc" = "cake";
+    "net.core.default_qdisc" = "cake"; # fq
 
     #"vm.swappiness" = 0; # or 10
     
