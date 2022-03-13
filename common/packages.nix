@@ -63,6 +63,7 @@ in
     ### C ###
     capitaine-cursors
     #carla
+    chromium
     #colorpicker
 
     ### D ###
@@ -137,10 +138,10 @@ in
     mu
 
     ### N ###
-    #neovim
     #netbeans
     networkmanagerapplet
-    #nodejs-16_x nodePackages."@vue/cli" # (Used at work, not used atm)
+    nmap
+    nodejs #nodePackages."@vue/cli" # (Used at work, not used atm)
     #nvtop
 
     #ncdu # like du but interactive
@@ -174,6 +175,7 @@ in
     rofi
 
     ### S ###
+    scrcpy
     speedtest-cli
     spotify
     #sshpass

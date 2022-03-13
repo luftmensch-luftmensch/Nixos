@@ -7,7 +7,7 @@
     #wrapperFeatures.base = true;
     extraPackages = with pkgs; [
       #swaylock # substituted with swaylock-effects
-      #bemenu # dmenu for wayland
+      bemenu # dmenu for wayland
       #sxiv
       imv
       wl-clipboard
