@@ -1,8 +1,8 @@
 { lib, config, pkgs, ... }:
 let
-  #neovimSHA = "0g22x7r43iy7ywz9mxrhak86fx3h4by7j2vqhfsa9kk559qf4b3k";
+  #neovimSHA = "08833ssyvrwkg2fk6dv3hgl8p51i8yb5i50nvi5gz3disfaxpn0y";
 
-  neovimSHA = "08833ssyvrwkg2fk6dv3hgl8p51i8yb5i50nvi5gz3disfaxpn0y";
+  neovimSHA = "0am1bifxg8088gzw9g2qmbqmql100lhai5lkaxjkigbarfkb0rk8";
   emacsSHA = "01pyv8g89cfy9c7iw5krb209j1cn8j79cqqmpc2zgp235aph4wjj";
   emacsREV = "3204060454868491463e951a7c29947bbe09bc2f.tar.gz";
 in
