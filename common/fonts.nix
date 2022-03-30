@@ -11,7 +11,7 @@
     #noto-fonts-emoji 
     source-code-pro
     #vegur
-    #victor-mono
+    victor-mono
     #cantarell_fonts
     #inconsolata
     mononoki
