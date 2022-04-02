@@ -2,7 +2,6 @@
 let
   user_pkgs = with pkgs; if (config.networking.hostName == "home") then [
     dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
-    #emacs
     gimp-with-plugins
     imv
     libreoffice
@@ -24,8 +23,6 @@ let
     #edk2
     #libvirt
     #OVMF
-
-    
 
   ] else [
     acpi # information about battery
@@ -101,6 +98,7 @@ in
     ### H ###
     #haskellPackages.greenclip
     htop
+    hugo
 
     # Spell checking for flyspell
     hunspell
