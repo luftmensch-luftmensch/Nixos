@@ -43,6 +43,11 @@
 - [[#about][About]]
 - [[#quick-start][Quick start]]
 * About
+This is my configuration for NixOS, meant to harmonize my different systems.
+
+This is **not** necessarily an example of good practices. This is what I am
+(probably) currently using.
+
 The entire system configuration is written in Nix. It is composed of a host specific configuration ([[file:host/home/][home]] & [[file:host/laptop/][laptop]]) that includes stuff  specific for my different hosts; a [[file:common/][common]] directory containing shared config files between all my machines, and a [[file:cachix/][cachix]] directory in order to make less expensive switching to a new generation ([[https://app.cachix.org/cache/nix-community][Installation guide]]).
 
 A convenience [[file:nix-install.sh][script]] is provided to setup the system on the live ISO (both ext4 and zfs installation is supported).

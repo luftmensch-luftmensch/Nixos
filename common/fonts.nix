@@ -9,6 +9,7 @@
     #hack-font
     (nerdfonts.override { fonts = [ "Iosevka" ];  })
     #noto-fonts-emoji 
+    #roboto
     source-code-pro
     #vegur
     victor-mono
@@ -16,5 +17,6 @@
     #inconsolata
     mononoki
     #twemoji-color-font
+    scientifica
   ];
 }
