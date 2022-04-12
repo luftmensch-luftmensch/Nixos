@@ -11,8 +11,8 @@
     };
 
     opengl= {
-      #enable = true;
-    #  #driSupport = true;
+      enable = true;
+      #driSupport = true;
       extraPackages = with pkgs; [ amdvlk ];
     };
     #pulseaudio = {

@@ -27,7 +27,8 @@
     #};
     openssh = {
       enable = true;
-      forwardX11 = true;
+      forwardX11 = false;
+      #startWhenNeeded = true;
       #passwordAuthentication = false;
       #allowSFTP = false; # Don't set this if you need sftp
       #challengeResponseAuthentication = false;
