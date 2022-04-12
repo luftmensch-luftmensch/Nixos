@@ -2,43 +2,45 @@
 {
 
   ### NIXPKGS OVERLAYS - TOUCHEGG ###
-  nixpkgs.overlays = [
-    (self: super:
-      {
-        touchegg = super.touchegg.overrideAttrs (old: rec {
-          version = "2.0.9";
+  #nixpkgs.overlays = [
+  #  (self: super:
+  #    {
+  #      touchegg = super.touchegg.overrideAttrs (old: rec {
+  #        #version = "2.0.9";
+  #        version = "2.0.14";
 
-          src = super.fetchzip {
-            url = "https://github.com/JoseExposito/touchegg/archive/${version}.zip";
-            sha256 = "sha256-dIUAN65grsFiCF1iDI2hDJQUtLmXxJ/1qAl/55NzRc0=";
-          };
+  #        src = super.fetchzip {
+  #          url = "https://github.com/JoseExposito/touchegg/archive/${version}.zip";
+  #          #sha256 = "sha256-dIUAN65grsFiCF1iDI2hDJQUtLmXxJ/1qAl/55NzRc0=";
+  #          sha256 = "1h6c9mn7b77s50bi959nslcgmf8a443h5l2sfjshpl80jkf3gksm";
+  #        };
 
-          PKG_CONFIG_SYSTEMD_SYSTEMDSYSTEMUNITDIR = "${placeholder "out"}/lib/systemd/system";
+  #        PKG_CONFIG_SYSTEMD_SYSTEMDSYSTEMUNITDIR = "${placeholder "out"}/lib/systemd/system";
 
-          buildInputs = with super; [
-            systemd
-            libinput
-            pugixml
-            cairo
-            gtk3-x11
-            pcre
-          ] ++ (with xorg; [
-            libX11
-            libXtst
-            libXrandr
-            libXi
-            libXdmcp
-            libpthreadstubs
-            libxcb
-          ]);
+  #        buildInputs = with super; [
+  #          systemd
+  #          libinput
+  #          pugixml
+  #          cairo
+  #          gtk3-x11
+  #          pcre
+  #        ] ++ (with xorg; [
+  #          libX11
+  #          libXtst
+  #          libXrandr
+  #          libXi
+  #          libXdmcp
+  #          libpthreadstubs
+  #          libxcb
+  #        ]);
 
-          nativeBuildInputs = with super; [ pkg-config cmake ];
+  #        nativeBuildInputs = with super; [ pkg-config cmake ];
 
-          preConfigure = "";
-        });
-      })
+  #        preConfigure = "";
+  #      });
+  #    })
 
-  ];
+  #];
 
   systemd.services.touchegg = {
     enable = true;

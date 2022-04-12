@@ -30,7 +30,7 @@ let
     brightnessctl # manage brightness
     neovim
     pulseaudio
-    touchegg # Waiting for the latest release -> now using an overlay
+    touchegg
   ];
 in
 {
@@ -176,6 +176,7 @@ in
     scrcpy
     speedtest-cli
     spotify
+    sqlite
     #sshpass
     #steam steam-run-native # Gaming
 
