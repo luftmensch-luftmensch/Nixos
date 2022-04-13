@@ -7,9 +7,12 @@
     #/run/current-system/sw/bin/systemctl stop homelab.service
     #/run/current-system/sw/bin/systemctl restart homelab.service
     #/run/current-system/sw/bin/systemctl status homelab.service
+
+    # TODO: Solve this:
+    # After starting you need to get the pw with `sudo systemd-tty-ask-password-agent --query`
     homelab = {
       config = '' config /home/valentino/.config/vpn/thinkpad.ovpn '';
-      autoStart = true;
+      autoStart = false;
       updateResolvConf = true;
     };
   };
