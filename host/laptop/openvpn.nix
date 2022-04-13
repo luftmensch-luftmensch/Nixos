@@ -11,6 +11,6 @@
       config = '' config /home/valentino/.config/vpn/thinkpad.ovpn '';
       autoStart = true;
       updateResolvConf = true;
-    } 
+    };
   };
 }
