@@ -1,18 +1,16 @@
 { lib, config, pkgs, ... }:
 {
 
-  ### NIXPKGS OVERLAYS - TOUCHEGG ###
+  ### NIXPKGS OVERLAYS - TOUCHEGG (NO MORE NEEDED) ###
   #nixpkgs.overlays = [
   #  (self: super:
   #    {
   #      touchegg = super.touchegg.overrideAttrs (old: rec {
-  #        #version = "2.0.9";
-  #        version = "2.0.14";
+  #        version = "2.0.9";
 
   #        src = super.fetchzip {
   #          url = "https://github.com/JoseExposito/touchegg/archive/${version}.zip";
-  #          #sha256 = "sha256-dIUAN65grsFiCF1iDI2hDJQUtLmXxJ/1qAl/55NzRc0=";
-  #          sha256 = "1h6c9mn7b77s50bi959nslcgmf8a443h5l2sfjshpl80jkf3gksm";
+  #          sha256 = "sha256-dIUAN65grsFiCF1iDI2hDJQUtLmXxJ/1qAl/55NzRc0=";
   #        };
 
   #        PKG_CONFIG_SYSTEMD_SYSTEMDSYSTEMUNITDIR = "${placeholder "out"}/lib/systemd/system";
@@ -54,16 +52,20 @@
       ExecStart = "${pkgs.touchegg}/bin/touchegg --daemon";
     };
   };
-  systemd.user.services.touchegg-client = {
-    description = "Touchégg. The client.";
 
-    wantedBy = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
+  # For some reason launching touchegg as systemd service fails to exec command with swaymsg
+  # TODO: Try to find a solution (for now I manage it throw sway)
+  #systemd.user.services.touchegg-client = {
+  #  enable = true;
+  #  description = "Touchégg. The client.";
 
-    serviceConfig = {
-      Restart = "on-failure";
-      ExecStart = "${pkgs.touchegg}/bin/touchegg";
-    };
-  };
+  #  wantedBy = [ "graphical-session.target" ];
+  #  partOf = [ "graphical-session.target" ];
+
+  #  serviceConfig = {
+  #    Restart = "on-failure";
+  #    ExecStart = "${pkgs.touchegg}/bin/touchegg --client";
+  #  };
+  #};
 } 
 
