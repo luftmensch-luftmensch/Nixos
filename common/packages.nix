@@ -30,6 +30,7 @@ let
     brightnessctl # manage brightness
     neovim
     pulseaudio
+    wireguard-tools
     touchegg
   ];
 in

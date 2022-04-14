@@ -10,6 +10,7 @@ in {
     firewall = {
       allowedTCPPortRanges = localRanges;
       allowedUDPPortRanges = localRanges;
+      allowedUDPPorts = [ 51820 ];
     };
   };
 }
