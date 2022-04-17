@@ -2,34 +2,45 @@
 { lib, config, pkgs, ... }:
 {
   services = {
+
     #chrony = {
     #  enable = true;
     #};
+
     #flatpak = {
     #  enable = true;
     #};
+
     #fprintd = {
     #  enable = true;
     #  package = (pkgs.callPackage ./fprint/fprintd.nix { });
     # prendi config da ~/config/nixos/fprint
     #};
+
     #gpm = {
     #  enable = true; # Virtual mouse pointer for TTY consoles
     #}
+
     #hardware = {
     #  bolt.enable = true; 
     #};
+
     locate = {
       enable = true;
     };
+
     #keynav = { # Enable mouse control with keyboard
     #  enable = true;
     #};
+
     openssh = {
       enable = true;
       forwardX11 = false;
+
+      permitRootLogin = "no";
+      passwordAuthentication = false;
+      ports = [ 6969 ];
       #startWhenNeeded = true;
-      #passwordAuthentication = false;
       #allowSFTP = false; # Don't set this if you need sftp
       #challengeResponseAuthentication = false;
       #extraConfig = ''
@@ -46,6 +57,7 @@
     #  openFirewall = true;
     #  user = "felschr";
     #};
+
     #postgresql = {
     #  enable = true;
     #  package = pkgs.postgresql_13;
@@ -59,6 +71,7 @@
     #    eroot     postgres  postgres
     #  '';
     #};
+
     printing = {
       enable = true;
       #drivers = [ pkgs.hplip pkgs.brlaser pkgs.brgenml1lpr pkgs.brgenml1cupswrapper ];
@@ -127,5 +140,4 @@
     };
 
   };
-
 }
