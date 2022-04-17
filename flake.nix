@@ -1,7 +1,5 @@
 {
   description = "A collection of crap, hacks and copy-paste to make my localhosts boot";
-  #description = "My NixOS configuration";
-  #description = "Nixos System configuration";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-21.11";
