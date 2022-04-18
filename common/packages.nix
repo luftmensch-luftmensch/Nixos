@@ -224,6 +224,7 @@ in
 
     ### Y ###
     youtube-dl
+    yt-dlp # Youtube dl fork
 
     ### Z ###
     zathura  

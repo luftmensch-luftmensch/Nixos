@@ -16,7 +16,7 @@
 
 
       peers = [
-        # For a client configuration, one peer entry for the server will suffice.
+        # For a client configuration, one peer entry for the server will be enough.
 
         # HOME
         {
