@@ -13,6 +13,8 @@ let
     scrot # Screenshot utility on Xorg
     vimHugeX # vim with X clipboard
 
+    xautolock
+    xclip
     xorg.xev
     xorg.xkill
     xorg.xrdb
@@ -52,6 +54,7 @@ in
     bat
     #bc
     #betterlockscreen
+    bind
     bitwarden #bitwarden-cli
     bluez
     breeze-gtk
@@ -77,6 +80,7 @@ in
     exiftool # Used for emms
 
     ### F ###
+    fd # Alternative to find (much faster)
     feh
     firefox
     filezilla
@@ -148,7 +152,7 @@ in
     ### O ###
     obs-studio
     #onedrive
-    #openvpn # VPN -> check also about service
+    #openvpn # VPN -> used as service
     openssl
 
     ### P ###
@@ -175,6 +179,7 @@ in
 
     ### S ###
     scrcpy
+    shellcheck
     speedtest-cli
     spotify
     sqlite
@@ -206,15 +211,13 @@ in
     #vault # (bitwarden alternative)
     #viewnior
     #virt-viewer 
-    #openvpn wireguard # VPN Stuff
     #vscode
 
     ### W ###
     wget
+    #wireguard # VPN -> used as service
 
     ### X ###
-    xautolock
-    xclip
     xdg-user-dirs
     xdotool
     xfce.thunar # Need xfce.tumbler
@@ -224,7 +227,7 @@ in
 
     ### Y ###
     youtube-dl
-    yt-dlp # Youtube dl fork
+    yt-dlp # Youtube-dl fork
 
     ### Z ###
     zathura  
@@ -244,10 +247,10 @@ in
 
     ### Nix related stuff ###
 
-    cachix                              # Compiled binary hosting for Nix
+    cachix                               # Compiled binary hosting for Nix
     #direnv                              # Manage directory environments
     #niv                                 # Dependency management for Nix
-    nix-index                           # Locate packages
+    nix-index                            # Locate packages
     #nix-prefetch-url                    # Prefetch url for override and overlays (add a url after nix-prefetch-url)
     #nix-prefetch-git                    # Same logic of nix-prefetch-url
     #nixpkgs-fmt                         # Nix code formatter for nixpkgs
@@ -288,8 +291,6 @@ in
     #    minted
     #    pygmentex;
     #})
-
-    #xtitle
 
   ] ++ user_pkgs ;
 }
