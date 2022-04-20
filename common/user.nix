@@ -2,12 +2,13 @@
 let
   user_ssh_key = if (config.networking.hostName == "home") then 
 
-    # Home ssh key
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILufMERlTA2Nc1m6YyIt0dGkUgVBNEgUjJae3eTlWur2 valentino@home"
-
-    else
     # Thinkpad ssh key
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFzBYr5q9VoIt65k0H+AkCdvjqKR6mRgEtg83bEFtvFJ valentino@PC";
+
+    else
+
+    # Home ssh key
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILufMERlTA2Nc1m6YyIt0dGkUgVBNEgUjJae3eTlWur2 valentino@home"
 in
 {
 
