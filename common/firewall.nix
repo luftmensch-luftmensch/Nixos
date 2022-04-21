@@ -11,6 +11,10 @@ in {
       allowedTCPPortRanges = localRanges;
       allowedUDPPortRanges = localRanges;
       allowedUDPPorts = [ 51820 ];
+
+      # TODO: Check this
+      #allowPing = true;
+      #logRefusedConnections = false;
     };
   };
 }

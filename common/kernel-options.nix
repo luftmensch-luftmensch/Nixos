@@ -24,6 +24,10 @@ in
     # "systemd.unified_cgroup_hierarchy=yes" "page_alloc.shuffle=1" "page_poison=1" "slub_debug=FZP" 
     # "acpi_rev_override=1" "pcie_port_pm=off" "rd.udev.log_priority=3" "cgroup_no_v1=all"
 
+    # F#&$*ng Spectre
+    # "nospec_store_bypass_disable" "no_stf_barrier" "mds=off" "mitigations=off"
+    # "noibrs" "noibpb" "nopti" "nospectre_v1" "nospectre_v2" "l1tf=off"
+
     supportedFilesystems = [ "zfs" ];
   };
 }
