@@ -64,7 +64,7 @@ in
     ### C ###
     capitaine-cursors
     #carla
-    chromium
+    #chromium
     #colorpicker
 
     ### D ###
@@ -202,6 +202,7 @@ in
     ### U ###
     #udiskie #(udisks2 frontend)
     ueberzug # (Needed for ranger - Work only on Xorg)
+    ungoogled-chromium
     #unrar
     unzip
     #usbguard # Protect against infected USB
