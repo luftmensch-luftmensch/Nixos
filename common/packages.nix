@@ -165,7 +165,6 @@ in
     #postgresql_13
     #postman
     #progress
-    #pulseaudio
 
     ### Q ###
     qt5ct
@@ -186,7 +185,7 @@ in
     #sshpass
     #steam steam-run-native # Gaming
 
-    #stow  # (TODO try it!)
+    #stow
     #skippy-id # (exposè function)
     #superTuxKart
 
@@ -201,8 +200,8 @@ in
 
     ### U ###
     #udiskie #(udisks2 frontend)
-    ueberzug # (Needed for ranger - Work only on Xorg)
-    ungoogled-chromium
+    #ueberzug # (Needed for ranger (disabled) - Work only on Xorg)
+    ungoogled-chromium # Fix to screen sharing under wayland (chromium crashed when trying to stream)
     #unrar
     unzip
     #usbguard # Protect against infected USB
