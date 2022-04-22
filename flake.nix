@@ -2,6 +2,8 @@
   description = "A collection of crap, hacks and copy-paste to make my localhosts boot";
 
   inputs = {
+    # Memo: It's possible to update only a single input like this:
+    #           nix flake lock --update-input neovim-overlay
     nixpkgs.url = "nixpkgs/nixos-21.11";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     emacs-overlay.url = "github:nix-community/emacs-overlay";

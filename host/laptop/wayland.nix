@@ -21,6 +21,7 @@
 
       # Screenshots utility
       grim slurp 
+      # TODO: Check this package: sway-contrib.grimshot
 
       jq # Used to make a screenshot of a specific window
       
