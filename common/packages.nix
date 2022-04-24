@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, inputs, lib, config, ... }:
 let
   user_pkgs = with pkgs; if (config.networking.hostName == "home") then [
     dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
@@ -75,7 +75,11 @@ in
     dunst
     
     ### E ###
-    emacsPgtkGcc # Needed an overlay for this! (emacs 29 with Pgtk + Gcc)
+    #inputs.nixos-unstable.legacyPackages."x86_64-linux".emacs
+    inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
+    #emacsPgtkGcc
+    # From trace: emacsPgtkGcc has been renamed to emacsPgtkNativeComp
+    #emacsPgtkNativeComp # Needed an overlay for this! (emacs 29 with Pgtk + Gcc)
     exa
     exiftool # Used for emms
 
