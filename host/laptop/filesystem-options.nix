@@ -8,6 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  # Unlock a full disk encryption NixOS with usb memory stick https://dataswamp.org/~solene/2020-10-06-nixos-luks-key.html
   boot = {
     initrd = {
       luks.devices."nix-enc" = {
