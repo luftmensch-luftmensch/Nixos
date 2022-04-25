@@ -33,6 +33,7 @@ let
     neovim
     pulseaudio
     wireguard-tools
+    tree-sitter # needed for neovim (language syntax highlighting)
     touchegg
   ];
 in
