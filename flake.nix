@@ -1,6 +1,8 @@
 {
   description = "A collection of crap, hacks and copy-paste to make my localhosts boot";
 
+
+  # Attribute set of all the dependencies used in the flake
   inputs = {
     # Memo: It's possible to update only a single input like this:
     #           nix flake lock --update-input neovim-overlay
@@ -11,6 +13,9 @@
     neovim-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
+  # Function of an argument that uses a the inputs for reference
+  # - Configure what you imported
+  # - Can be pretty much anything: Packages / configurations / modules / etc...
   # The @ symbols means `Bind the args to inputs`
   outputs = inputs @ {nixpkgs, nixos-unstable, nixos-hardware, ... }: 
     let
