@@ -1,8 +1,7 @@
 { lib, config, pkgs, ... }:
 let
 
-  #neovimSHA = "0gynmjpj5xrz1zhp0r35l30yj9kmga3rsn9sy7ajf33b5947z2r2";
-  neovimSHA = "0igynhdsa46bszvs17nk45ggnpgfckz8vdh2c8zy8ds8x62565pw";
+  neovimSHA = "0ypv1nvm7y4z272b5cc48s1wp5639wnrw5d76vdpakj7jn13r20f";
 
   #emacsSHA = "16i90wn14p89vx9zbfsm3yqy93n434fn02n5s1anr6gav4pnp56n";
   #emacsREV = "6216f7c7e05c5f7d579dc898219207a8509be910.tar.gz";
