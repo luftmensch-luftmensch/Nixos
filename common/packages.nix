@@ -36,6 +36,12 @@ let
     tree-sitter # needed for neovim (language syntax highlighting)
     touchegg
   ];
+
+  unstable_pkgs = with pkgs; [
+    inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
+    inputs.nixos-unstable.legacyPackages.${pkgs.system}.librewolf
+    
+  ];
 in
 {
   environment.systemPackages = with pkgs; [
@@ -76,8 +82,7 @@ in
     dunst
     
     ### E ###
-    #inputs.nixos-unstable.legacyPackages."x86_64-linux".emacs
-    inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
+    #inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
     #emacsPgtkGcc
     # From trace: emacsPgtkGcc has been renamed to emacsPgtkNativeComp
     #emacsPgtkNativeComp # Needed an overlay for this! (emacs 29 with Pgtk + Gcc)
@@ -297,5 +302,5 @@ in
     #    pygmentex;
     #})
 
-  ] ++ user_pkgs ;
+  ] ++ user_pkgs ++ unstable_pkgs;
 }
