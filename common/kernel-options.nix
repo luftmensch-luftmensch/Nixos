@@ -3,7 +3,7 @@ let
   kernel-module = if (config.networking.hostName == "home") then 
       "kvm-intel" else "kvm-amd";
   kernel-package = if (config.networking.hostName == "home") then 
-      "linuxPackages_5_16" else "linuxPackages_latest";
+      "linuxPackages" else "linuxPackages_latest";
 in
 {
   boot = {
