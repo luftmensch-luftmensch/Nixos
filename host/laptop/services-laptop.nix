@@ -97,14 +97,18 @@
         CPU_MAX_PERF_ON_AC=70;
         #CPU_MIN_PERF_ON_AC = 0;
         #CPU_BOOST_ON_AC = 1;
+        #CPU_ENERGY_PERF_POLICY_ON_AC="performance";
         #CPU_HWP_ON_AC = "performance";
+        #CPU_HWP_DYN_BOOST_ON_AC=1;
 
         # CPU - BAT #
         CPU_SCALING_GOVERNOR_ON_BAT="schedutil";
         CPU_MAX_PERF_ON_BAT=60;
         #CPU_MIN_PERF_ON_BAT = 0;
         #CPU_BOOST_ON_BAT = 1;
+        #CPU_ENERGY_PERF_POLICY_ON_BAT="power";
         #CPU_HWP_ON_BAT = "performance";
+        #CPU_HWP_DYN_BOOST_ON_BAT=0;
 
 
         # DISK OPTIONS #
@@ -145,6 +149,9 @@
         # NMI #
         #"NMI_WATCHDOG" = 0;
 
+        # PLATFORM - PROFILE #
+        #PLATFORM_PROFILE_ON_AC="performance";
+        #PLATFORM_PROFILE_ON_BAT="low-power";
         
         # PCIE  - AC #
         #PCIE_ASPM_ON_AC = default;
