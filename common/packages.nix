@@ -1,5 +1,6 @@
 { pkgs, inputs, lib, config, ... }:
 let
+  # lib.optionals (config.networking.hostName == "home")
   user_pkgs = with pkgs; if (config.networking.hostName == "home") then [
     dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
     gimp-with-plugins
