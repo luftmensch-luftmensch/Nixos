@@ -40,7 +40,7 @@ let
 
   unstable_pkgs = with pkgs; [
     inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
-    inputs.nixos-unstable.legacyPackages.${pkgs.system}.librewolf
+    #inputs.nixos-unstable.legacyPackages.${pkgs.system}.librewolf # Waiting for this issue -> https://github.com/NixOS/nixpkgs/issues/172415
     
   ];
 in
