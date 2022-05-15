@@ -31,7 +31,7 @@ let
     acpi # information about battery
     #autorandr # manage multiple screen (Xorg)
     brightnessctl # manage brightness
-    neovim
+    inputs.nixos-unstable.legacyPackages.${pkgs.system}.neovim
     pulseaudio
     wireguard-tools
     tree-sitter # needed for neovim (language syntax highlighting)

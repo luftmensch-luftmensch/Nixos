@@ -6,11 +6,14 @@
   inputs = {
     # Memo: It's possible to update only a single input like this:
     #           nix flake lock --update-input neovim-overlay
+
     nixpkgs.url = "github:nixos/nixpkgs/nixos-21.11";
-    nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # Used to get emacs 28.1 (avoiding the overlays)
+    nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # Used to get some more updated packages
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    ###              NIX COMMUNITY               ###
     #emacs-overlay.url = "github:nix-community/emacs-overlay";
-    neovim-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    #neovim-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   # Function of an argument that uses a the inputs for reference

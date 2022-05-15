@@ -2,7 +2,7 @@
 let
 
   #neovimSHA = "0kdq5x1l8j7664rqlmdp4dsqjkpsz6bjcmhkm6hk5a8pwglsxc02";
-  neovimSHA = "1cw9f2dfd8i5s3zkri0n37dqdbraqjvxpnwdsgmsv7an9wcb8a7n";
+  #neovimSHA = "1cw9f2dfd8i5s3zkri0n37dqdbraqjvxpnwdsgmsv7an9wcb8a7n";
 
   #emacsSHA = "16i90wn14p89vx9zbfsm3yqy93n434fn02n5s1anr6gav4pnp56n";
   #emacsREV = "6216f7c7e05c5f7d579dc898219207a8509be910.tar.gz";
@@ -22,10 +22,10 @@ in
     #}))
 
     ## Neovim overlay
-    (import (builtins.fetchTarball {
-      url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
-      sha256 = "${neovimSHA}";
-    }))
+    #(import (builtins.fetchTarball {
+    #  url = "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+    #  sha256 = "${neovimSHA}";
+    #}))
 
   ];
 }
