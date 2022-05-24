@@ -1,4 +1,10 @@
 {
+  # Memo:
+  # How to choose the name between default.nix shell.nix and flake.nix: It depends on how you use nix 
+  # 1. If you use nix-shell, then only shell.nix called;
+  # 2. If you use nix-build, then only default.nix called;
+  # 3. If you use nix develop, then flake.nix called (and it may contain references to shell.nix or default.nix inside it)
+
   description = "A collection of crap, hacks and copy-paste to make my localhosts boot";
 
 
