@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
-# Custom range for my Uni projects
+# Custom range for my projects
 
-# TODO: Set per interfaces (Now setted globally)
+# Setted globally
 let
   localRanges = [{from = 9000; to = 9091;}];
 in {
@@ -12,8 +12,8 @@ in {
       allowedUDPPortRanges = localRanges;
       allowedUDPPorts = [ 51820 ];
 
-      # TODO: Check this
-      #allowPing = true;
+      # Whether to log rejected or dropped incoming connections.
+      # Note: The logs are found in the kernel logs, i.e. `dmesg` or `journalctl -k`
       #logRefusedConnections = false;
     };
   };

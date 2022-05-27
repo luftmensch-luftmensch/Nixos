@@ -20,7 +20,7 @@
       glib 
 
       # Screenshots utility
-      # TODO: Check this package: sway-contrib.grimshot (grimshot --notify copy area)
+      sway-contrib.grimshot # (grimshot --notify copy area)
       grim slurp 
 
       jq # Used to make a screenshot of a specific window
