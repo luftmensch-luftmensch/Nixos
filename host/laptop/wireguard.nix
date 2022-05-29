@@ -38,6 +38,15 @@
     };
   };
 
+  # In order to use Wireguard as "Server" node (not necessary on a peer node), we need to enable NAT
+  #networking = {
+  #  nat = {
+  #    enable = true;
+  #    externalInterface = "enp5s0";
+  #    internalInterfaces = builtins.attrNames config.networking.wireguard.interfaces;
+  #  };
+  #};
+
   systemd.services = {
     wg-quick-wg0.wantedBy = lib.mkForce [ ];
   };
