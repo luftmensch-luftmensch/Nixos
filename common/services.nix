@@ -1,5 +1,11 @@
 # Here I set my system services configuration
 { lib, config, pkgs, ... }:
+# let
+#   brother_printer = pkgs.linkFarm "Brother_HL-1210W_series" [{
+#     name = "share/cups/model/hl3170cdw.ppd";
+#     path = "${inputs.brother-hl-1210W-driver}/Brother_HL-1210W_series.ppd";
+#   }];
+#   in 
 {
   services = {
 
@@ -23,6 +29,15 @@
 
     #hardware = {
     #  bolt.enable = true; 
+
+    #  printers = {
+    #    ensureDefaultPrinter = "Brother_HL-1210W_series";
+    #    ensurePrinters = [{
+    #      name = "Brother_HL-1210W_series";
+    #      deviceUri = "usb://Brother/HL-1210W%20series?serial=E74223F0N655618";
+    #      model = "Brother-HL-1230-hl1250.ppd";
+    #    }];
+    #  };
     #};
 
     locate = {
@@ -74,8 +89,7 @@
 
     printing = {
       enable = true;
-      #drivers = [ pkgs.hplip pkgs.brlaser pkgs.brgenml1lpr pkgs.brgenml1cupswrapper ];
-      #drivers = [ pkgs.brlaser ];
+      #drivers = [ brother_printer ]
     };
 
     #redshift = {
@@ -96,6 +110,12 @@
     #  notifications.x11.enable = true;
     #};
 
+    # Enable saned network daemon for remote connection to scanners
+    #saned = {
+    #  enable = true;
+    #}
+
+    # Available also under programs (programs.system-config-printer)
     #system-config-printer = {
     #  enable = true;
     #}
