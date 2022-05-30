@@ -24,6 +24,8 @@
 
 # https://www.reddit.com/r/NixOS/comments/q19bu1/multiboot_archlinux_nixos_grub_zfs_encrypted_setup/
 
+# ZFS Nixos Wiki: https://nixos.wiki/wiki/ZFS#How_to_install_NixOS_on_a_ZFS_root_filesystem
+
 set -e # exit immediately if a command return non-zero status
 usage() {
   echo "This script generate a full working Nixos installation with encrypted ZFS partition as root"
