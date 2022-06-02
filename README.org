@@ -61,3 +61,28 @@ A convenience [[file:nix-install.sh][script]] is provided to setup the system on
 7. Reboot!
 8. Change your ~root~ and ~$USER~ passwords!
 9. Enjoy!
+* Some useful guide
+** Written guide / blogs (Flakes)
+1. ~man nix-flake~ (22.05);
+2. [[https://nixos.wiki/wiki/Flakes][Flakes]];
+3. [[https://nixos.org/guides/nix-pills/][Nix pills]];
+4. [[https://www.tweag.io/blog/2020-05-25-flakes/][Nix Flakes - Part 1: Introduction and tutorial]];
+5. [[https://www.tweag.io/blog/2020-06-25-eval-cache/][Nix Flakes - Part 2: Evaluation caching]];
+6. [[https://www.tweag.io/blog/2020-07-31-nixos-flakes/][Nix Flakes - Part 3: Managing Nixos Systems]];
+7. [[https://xeiaso.net/blog/nix-flakes-1-2022-02-21][Xe on Flakes: Introduction]];
+8. [[https://xeiaso.net/blog/nix-flakes-2-2022-02-27][Xe on Flakes: Packages and How to use Them]];
+9. [[https://serokell.io/blog/practical-nix-flakes][Pratical Nix Flakes by Serokell]];
+10. [[https://www.yanboyang.com/nixflakes/][Nix flakes by Yanboyang]];
+11. [[https://ianthehenry.com/posts/how-to-learn-nix/][How to learn Nix]];
+12. [[https://garnix.io/blog/converting-to-flakes][Nix flakes, and how to convert to them]];
+** Video sources
+1. [[https://www.youtube.com/watch?v=90P-Ml1318U][Jon R tutorial]];
+2. [[https://www.youtube.com/playlist?list=PL-saUBvIJzOkjAw_vOac75v-x6EzNzZq-][Will T tutorials]];
+3. [[https://www.youtube.com/watch?v=AGVXJ-TIv3Y][Nixos Setup Guide]];
+4. [[https://www.youtube.com/watch?v=QXUlhnhuRX4][Jorg Thalheim: Nix flakes 101]];
+** Nix Flake templates for various languages
++ [[https://github.com/serokell/templates][Templates by serokell (haskell, infra, python, rust)]];
++ [[https://github.com/lukebfox/nix-flake-templates][Templates by lukebfox (rust, python, elixir)]];
++ [[https://github.com/rdk31/nix-flake-templates][Templates by rdk31 (python, rust)]];
+** Installation guide
+1. [[https://jdisaacs.com/blog/nixos-config/][Nixos configuration with flakes]];
