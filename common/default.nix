@@ -11,7 +11,7 @@
     ./kernel-options.nix # Kernel options + zfs options
     ./locales.nix # Timezone and locales
     ./nix.nix # Nix package manager configuration & extras
-    ./overrides.nix # dmenu patches
+    ./overrides.nix # Absolutely proprietary options
     #./overlays.nix # Emacs 29 + Neovim unstable
     ./packages.nix # Global packages
     ./programs.nix # Global programs
