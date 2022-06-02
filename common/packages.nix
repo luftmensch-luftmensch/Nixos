@@ -239,6 +239,7 @@ in
     ### Y ###
     youtube-dl
     yt-dlp # Youtube-dl fork
+    #yuzu-mainline # nintendo switch emulator
 
     ### Z ###
     zathura  
