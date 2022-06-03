@@ -24,6 +24,11 @@
     # Disable it, since we don't need it, and is a potential security concern.
     "kernel.sysrq" = 0; # don't allow sysrqs (Magic SysRq is a key combination directly intercepted by the kernel and can be used, among other things, to perform an emergency shutdown)
     #"kernel.printk" = "3 4 3 3"; # don't let logging bleed into TTY
+    
+    # SHMMAX is the maximum size of a shared memory segment on a Linux system whereas
+    # SHMALL is the maximum allocation of shared memory pages on a system
+    #"kernel.shmmax" = 4294967296;
+    #"kernel.shmall" = 4194304;
 
     ## TCP hardening
     # Prevent bogus ICMP errors from filling up logs.
