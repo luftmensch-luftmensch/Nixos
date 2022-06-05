@@ -76,8 +76,19 @@
     # both incoming and outgoing connections:
     "net.ipv4.tcp_fastopen" = 3;
     # Bufferbloat mitigations + slight improvement in throughput & latency
-    "net.ipv4.tcp_congestion_control" = "bbr";
+    "net.ipv4.tcp_congestion_control" = "bbr"; # htcp
     "net.core.default_qdisc" = "cake"; # fq
+
+
+    # DDoS Protection With IPtables - Source: https://javapipe.com/blog/iptables-ddos-protection/
+    
+    #"net.core.netdev_max_backlog" = 262144; # Increase number of incoming connections backlog
+    #"net.core.rmem_default" = 31457280; # Default Socket Receive Buffer
+    #"net.core.rmem_max" = 67108864; # Maximum Socket Receive Buffer
+    #"net.core.wmem_default" = 31457280; # Default Socket Send Buffer
+    #"net.core.wmem_max" = 67108864; # Maximum Socket Send Buffer
+    #"net.core.somaxconn" = 65535; # Increase number of incoming connections
+    #"net.core.optmem_max" = 25165824; # Increase the maximum amount of option memory buffers
 
     #"vm.swappiness" = 0; # or 10
     
