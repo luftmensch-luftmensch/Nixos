@@ -55,6 +55,14 @@
     "net.ipv6.conf.all.accept_redirects" = 0;
     "net.ipv6.conf.default.accept_redirects" = 0;
 
+
+    # Log packets with impossible addresses to kernel log.log_martians
+    # for the interface will be enabled if at least one of
+    # conf/{all,interface}/log_martians is set to TRUE, it will be disabled otherwise
+    #"net.ipv4.conf.default.log_martians" = 1;
+    #"net.ipv4.conf.all.log_martians" = 1;
+
+    
     #"net.ipv6.conf.all.use_tempaddr" = 2;
 
     # Protects against SYN flood attacks
