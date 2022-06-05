@@ -28,6 +28,10 @@ in
     # "nospec_store_bypass_disable" "no_stf_barrier" "mds=off" "mitigations=off"
     # "noibrs" "noibpb" "nopti" "nospectre_v1" "nospectre_v2" "l1tf=off"
 
+    # Kernel params with zfs
+    # "zfs.zfs_arc_max=17179860388" # 16GB, was 8383029248 (8GB) # Tune ZFS ARC size
+
+
     supportedFilesystems = [ "zfs" ];
   };
 }
