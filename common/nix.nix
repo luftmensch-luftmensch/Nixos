@@ -10,7 +10,7 @@
     autoOptimiseStore = true;
     #readOnlyStore = false;
     trustedUsers = [ "root" "valentino" ]; # in order to use cachix. Other options: "@wheel"
-    #package = pkgs.nixFlakes; # pkgs.nixUnstable
+    package = pkgs.nixFlakes; # pkgs.nixUnstable
 
     # keep-outputs and keep-derivations options are great for development shells
     # also empty the registry: it will allow you to not redownload 100MBs every time
