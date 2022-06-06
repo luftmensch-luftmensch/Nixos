@@ -17,7 +17,8 @@ in
 
     #Emacs overlay
     #(import (builtins.fetchTarball{
-    #  url = "https://github.com/nix-community/emacs-overlay/archive/${emacsREV}";
+    #  #url = "https://github.com/nix-community/emacs-overlay/archive/${emacsREV}";
+    #  url = "https://github.com/nix-community/emacs-overlay/archive/master@{2%20hours%20ago}.tar.gz";
     #  sha256 = "${emacsSHA}";
     #}))
 
