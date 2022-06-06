@@ -13,7 +13,7 @@ in
 
   nixpkgs.overlays = [
     # In order to get the latest successful build cached (avoiding to build from source) go to https://hydra.nix-community.org/project/emacs-overlay (stable branch)
-    # Get the latest succeful build for emacsPgtkGcc  -> inputs -> get revision and change it into url version
+    # Get the latest succeful build for emacsPgtkGcc  -> inputs -> get revision and change it into url version (see https://github.com/nix-community/emacs-overlay/issues/122)
 
     #Emacs overlay
     #(import (builtins.fetchTarball{
