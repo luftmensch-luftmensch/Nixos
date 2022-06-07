@@ -249,7 +249,7 @@ in
     zip
 
     # Programming
-    ccls clang_11 cmake gcc10 #gdb
+    ccls clang_11 cmake gcc #gdb
     gnumake valgrind
     jdk
     libtool
