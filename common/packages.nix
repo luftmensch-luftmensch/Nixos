@@ -89,6 +89,7 @@ in
     #emacsPgtkGcc
     # From trace: emacsPgtkGcc has been renamed to emacsPgtkNativeComp
     #emacsPgtkNativeComp # Needed an overlay for this! (emacs 29 with Pgtk + Gcc)
+    emacs
     exa
     exiftool # Used for emms
 
@@ -108,7 +109,7 @@ in
     # gitAndTools.gitFull
 
     gnome.adwaita-icon-theme
-    gnome.gtk
+    gtk3 # In substitution of gnome.gtk (removed on 13-01-2022)
     gnome3.gnome-disk-utility
     #guvcview #(camera preview)
     #gotop
