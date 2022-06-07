@@ -13,8 +13,8 @@
     # Memo: It's possible to update only a single input like this:
     #           nix flake lock --update-input neovim-overlay
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.11";
-    nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # Used to get some more updated packages
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
+    #nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # Used to get some more updated packages
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     ###              NIX COMMUNITY               ###
@@ -26,7 +26,8 @@
   # - Configure what you imported
   # - Can be pretty much anything: Packages / configurations / modules / etc...
   # The @ symbols means `Bind the args to inputs`
-  outputs = inputs @ {nixpkgs, nixos-unstable, nixos-hardware, ... }: 
+  #outputs = inputs @ {nixpkgs, nixos-unstable, nixos-hardware, ... }: 
+  outputs = {nixpkgs, nixos-hardware, ... }: 
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -37,7 +38,7 @@
     in {
       nixosConfigurations = {
         PC = lib.nixosSystem {
-          specialArgs = {inherit inputs;};
+          #specialArgs = {inherit inputs;}; # Enable only when using two different version of nixpkgs (stable/unstable) at once
           inherit system;
           modules = [
             nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen1 # Nixos hardware
@@ -47,7 +48,7 @@
         };
 
         home = lib.nixosSystem {
-          specialArgs = {inherit inputs;};
+          #specialArgs = {inherit inputs;}; 
           inherit system;
           modules = [
             ./home.nix

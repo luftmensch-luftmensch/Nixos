@@ -1,4 +1,5 @@
-{ pkgs, inputs, lib, config, ... }:
+#{ pkgs, inputs, lib, config, ... }: # Enable only when using two different version of nixpkgs (stable/unstable) at once
+{ pkgs, lib, config, ... }:
 let
   # lib.optionals (config.networking.hostName == "home")
   user_pkgs = with pkgs; if (config.networking.hostName == "home") then [
@@ -31,18 +32,19 @@ let
     acpi # information about battery
     #autorandr # manage multiple screen (Xorg)
     brightnessctl # manage brightness
-    inputs.nixos-unstable.legacyPackages.${pkgs.system}.neovim
+    #inputs.nixos-unstable.legacyPackages.${pkgs.system}.neovim
+    neovim
     pulseaudio
     wireguard-tools
     tree-sitter # needed for neovim (language syntax highlighting)
     touchegg
   ];
 
-  unstable_pkgs = with pkgs; [
-    inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
-    #inputs.nixos-unstable.legacyPackages.${pkgs.system}.librewolf # Waiting for this issue -> https://github.com/NixOS/nixpkgs/issues/172415
-    
-  ];
+  #unstable_pkgs = with pkgs; [
+  #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
+  #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.librewolf # Waiting for this issue -> https://github.com/NixOS/nixpkgs/issues/172415
+  #  
+  #];
 in
 {
   environment.systemPackages = with pkgs; [
@@ -304,5 +306,5 @@ in
     #    pygmentex;
     #})
 
-  ] ++ user_pkgs ++ unstable_pkgs;
+  ] ++ user_pkgs; #++ unstable_pkgs;
 }
