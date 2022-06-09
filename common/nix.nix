@@ -27,6 +27,8 @@
     # Other options (currently not used)
     #daemonNiceLevel = 2; # 19 max
     #daemonIONiceLevel = 2; # 7 max
+    #keep-outputs = true
+    #keep-derivations = true
 
     ## free up to 20GiB whenever there is less than 5GB left: 
     #extraOptions = ''
