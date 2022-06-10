@@ -215,6 +215,8 @@ in
     ### U ###
     #udiskie #(udisks2 frontend)
     #ueberzug # (Needed for ranger (disabled) - Work only on Xorg)
+
+    # chrome://flags/#enable-webrtc-pipewire-capturer (Enable it to share entire screen)
     ungoogled-chromium # Fix to screen sharing under wayland (chromium crashed when trying to stream)
     #unrar
     unzip
