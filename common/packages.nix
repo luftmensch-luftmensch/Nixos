@@ -67,8 +67,8 @@ in
     bind
     bitwarden #bitwarden-cli
     bluez
-    breeze-gtk
-    breeze-qt5
+    #breeze-gtk
+    #breeze-qt5
     #bmon # Network Bandwidth Monitoring and Debugging Tool
 
     ### C ###
@@ -182,6 +182,9 @@ in
 
     ### Q ###
     qt5ct
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.breeze-qt5
+
     qrcp
     qutebrowser
 
