@@ -11,7 +11,7 @@
       #  xdg-desktop-portal-gtk
       #  xdg-desktop-portal-gnome
       #];
-      gtkUsePortal = true;
+      #gtkUsePortal = true;
     };
   };
 
