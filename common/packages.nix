@@ -53,7 +53,7 @@ in
     ### A ###
     alacritty
     #android-file-transfer
-    androidStudioPackages.dev
+    #androidStudioPackages.dev
     #anydesk
     #ark
     #aspell aspellDicts.it # (moved to hunspell)
@@ -125,7 +125,7 @@ in
     hunspellDicts.en_US
 
     ### J ###
-    jetbrains.idea-community
+    #jetbrains.idea-community
 
     ### K ###
     #kdenlive
