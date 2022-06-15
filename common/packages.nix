@@ -32,7 +32,6 @@ let
     acpi # information about battery
     #autorandr # manage multiple screen (Xorg)
     brightnessctl # manage brightness
-    #inputs.nixos-unstable.legacyPackages.${pkgs.system}.neovim
     neovim
     pulseaudio
     wireguard-tools
@@ -43,7 +42,7 @@ let
   #unstable_pkgs = with pkgs; [
   #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
   #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.librewolf # Waiting for this issue -> https://github.com/NixOS/nixpkgs/issues/172415
-  #  
+  #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.neovim
   #];
 in
 {
@@ -80,8 +79,6 @@ in
     ### D ###
     #dbeaver # A better alternative to PGAdmin
     #devour # Enable terminal swallowing (used for zathura) # Only for X11
-    #dropbox
-    #dropbox-cli
     dunst
     
     ### E ###
@@ -186,7 +183,7 @@ in
     libsForQt5.breeze-qt5
 
     qrcp
-    qutebrowser
+    #qutebrowser
 
     ### R ###
     #ranger # No more used
@@ -245,7 +242,7 @@ in
     xfce.tumbler
 
     ### Y ###
-    youtube-dl
+    #youtube-dl
     yt-dlp # Youtube-dl fork
     #yuzu-mainline # nintendo switch emulator
 
