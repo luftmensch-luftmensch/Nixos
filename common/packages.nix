@@ -39,6 +39,18 @@ let
     touchegg
   ];
 
+  additional_pkgs_with_flags = with pkgs; [
+    (writeScriptBin "emacs-daemon" ''
+      ${pkgs.emacs}/bin/emacs --fg-daemon
+    '')
+  ];
+
+  wayland_custom_pkgs = with pkgs; lib.optionals (config.networking.hostName == "PC") [
+    (ungoogled-chromium.override {
+      commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WebRTCPipeWireCapturer";
+    })
+  ];
+
   #unstable_pkgs = with pkgs; [
   #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
   #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.librewolf # Waiting for this issue -> https://github.com/NixOS/nixpkgs/issues/172415
@@ -309,5 +321,5 @@ in
     #    pygmentex;
     #})
 
-  ] ++ user_pkgs; #++ unstable_pkgs;
+  ] ++ user_pkgs ++ additional_pkgs_with_flags ++ wayland_custom_pkgs ; #++ unstable_pkgs;
 }
