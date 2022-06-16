@@ -1,3 +1,15 @@
+#  _        __ _                                 _        _        __ _                                 _     
+# | |      / _| |                               | |      | |      / _| |                               | |    
+# | |_   _| |_| |_ _ __ ___   ___ _ __  ___  ___| |__    | |_   _| |_| |_ _ __ ___   ___ _ __  ___  ___| |__  
+# | | | | |  _| __| '_ ` _ \ / _ \ '_ \/ __|/ __| '_ \   | | | | |  _| __| '_ ` _ \ / _ \ '_ \/ __|/ __| '_ \ 
+# | | |_| | | | |_| | | | | |  __/ | | \__ \ (__| | | |  | | |_| | | | |_| | | | | |  __/ | | \__ \ (__| | | |
+# |_|\__,_|_|  \__|_| |_| |_|\___|_| |_|___/\___|_| |_|  |_|\__,_|_|  \__|_| |_| |_|\___|_| |_|___/\___|_| |_|
+#                                                                                                             
+# > Where the snow paradise begins
+#
+# Author:  luftmensch-luftmensch
+# URL:     https://github.com/luftmensch-luftmensch/Nixos/
+# License: GPL-3.0
 {
   # Memo:
   # How to choose the name between default.nix shell.nix and flake.nix: It depends on how you use nix 
