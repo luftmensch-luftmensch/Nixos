@@ -47,7 +47,7 @@ let
 
   wayland_custom_pkgs = with pkgs; lib.optionals (config.networking.hostName == "PC") [
     (ungoogled-chromium.override {
-      commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WebRTCPipeWireCapturer";
+      commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WebRTCPipeWireCapturer --enable-usermedia-screen-capturing";
     })
   ];
 
