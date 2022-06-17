@@ -30,7 +30,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     ###              NIX COMMUNITY               ###
-    #emacs-overlay.url = "github:nix-community/emacs-overlay";
+    #emacs-overlay.url = "github:nix-community/emacs-overlay"; "github:nix-community/emacs-overlay?rev=859fbd8964ae5605e44020a559d73905f1e1cfa5"; # In order to catch cachix
     #neovim-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
