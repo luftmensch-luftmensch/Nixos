@@ -3,6 +3,7 @@
 let
   # lib.optionals (config.networking.hostName == "home")
   user_pkgs = with pkgs; if (config.networking.hostName == "home") then [
+    chromium # Basic packages without custom command line flags
     dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
     gimp-with-plugins
     imv
@@ -46,7 +47,7 @@ let
   ];
 
   wayland_custom_pkgs = with pkgs; lib.optionals (config.networking.hostName == "PC") [
-    (ungoogled-chromium.override {
+    (chromium.override {
       commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WebRTCPipeWireCapturer --enable-usermedia-screen-capturing";
     })
   ];
@@ -229,7 +230,7 @@ in
     #ueberzug # (Needed for ranger (disabled) - Work only on Xorg)
 
     # chrome://flags/#enable-webrtc-pipewire-capturer (Enable it to share entire screen)
-    ungoogled-chromium # Fix to screen sharing under wayland (chromium crashed when trying to stream)
+    #ungoogled-chromium # Fix to screen sharing under wayland (chromium crashed when trying to stream)
     #unrar
     unzip
     #usbguard # Protect against infected USB
