@@ -22,6 +22,7 @@ in
       "docker"
       "scanner"
       "lp"
+      "lpadmin" # Add user to group used by the CUPS printing system
       "adbusers"
 
       # Currently not used -> To enable first comment the relevant part in the virtualisation.nix file
