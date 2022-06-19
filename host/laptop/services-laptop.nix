@@ -209,4 +209,19 @@
     };
     
   };
+
+  # In addition to logind suspend on lid switch enable a service to lock the screen before suspend
+  systemd.services.screen-locker = {
+    enable = true;
+    description = "Lock the screen before suspend";
+    before = ["sleep.target" "suspend.target"];
+    wantedBy = ["sleep.target" "suspend.target"];
+    serviceConfig = {
+      Type = "simple";
+      User = "%I";
+      #Environment = "DISPLAY=:1";
+      ExecStart = "${pkgs.swaylock-effects}/bin/swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --ignore-empty-password --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color 0F0F0F --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2";
+      TimeoutSec = "infinity";
+    };
+  };
 }
