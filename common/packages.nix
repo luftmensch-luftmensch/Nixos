@@ -52,6 +52,21 @@ let
     })
   ];
 
+  # bash script to let dbus know about important env variables and propogate them to relevent services
+  # run at the end of sway config
+  # see https://github.com/emersion/xdg-desktop-portal-wlr/wiki/"It-doesn't-work"-Troubleshooting-Checklist
+  dbus-sway-environment = pkgs.writeTextFile {
+    name = "dbus-sway-environment";
+    destination = "/bin/dbus-sway-environment";
+    executable = true;
+
+    text = ''
+      dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+      systemctl --user stop pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
+      systemctl --user start pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
+      '';
+  };
+
   #unstable_pkgs = with pkgs; [
   #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
   #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.librewolf # Waiting for this issue -> https://github.com/NixOS/nixpkgs/issues/172415
@@ -90,6 +105,7 @@ in
     #colorpicker
 
     ### D ###
+    dbus-sway-environment
     #dbeaver # A better alternative to PGAdmin
     #devour # Enable terminal swallowing (used for zathura) # Only for X11
     dunst
@@ -118,7 +134,9 @@ in
     git
     # gitAndTools.gitFull
 
-    gnome.adwaita-icon-theme
+    # make sure the default gnome icons are avaliable
+    # to gtk applications
+    gnome3.adwaita-icon-theme
     gtk3 # In substitution of gnome.gtk (removed on 13-01-2022)
     gnome3.gnome-disk-utility
     #guvcview #(camera preview)
