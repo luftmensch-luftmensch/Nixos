@@ -236,6 +236,7 @@ in
 
     ### T ###
     #teamviewer
+    tectonic # self-contained TEX/LaTex engine (tectonic -Z shell-escape --outdir=%o %f)
     tdesktop
     #telnet
     thunderbird # Email client
