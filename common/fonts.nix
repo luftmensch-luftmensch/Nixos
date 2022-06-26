@@ -5,7 +5,7 @@
     font-awesome
     fira-code
     #liberation_ttf	
-    #google-fonts
+    #google-fonts # Used for karla
     #hack-font
     (nerdfonts.override { fonts = [ "Iosevka" ];  })
     #noto-fonts-emoji 
