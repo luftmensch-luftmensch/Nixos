@@ -1,5 +1,6 @@
 { lib, config, pkgs, ... }:
 {
+  # To get list of the font installed: (fc-list : family)
   fonts.fonts = with pkgs; [
     #dejavu_fonts
     font-awesome
