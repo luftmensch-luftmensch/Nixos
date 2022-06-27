@@ -12,6 +12,7 @@
     #noto-fonts-emoji 
     #roboto
     source-code-pro
+    sarasa-gothic # A CJK programming font based on Iosevka and Source Han Sans
     #vegur
     victor-mono
     #cantarell_fonts
