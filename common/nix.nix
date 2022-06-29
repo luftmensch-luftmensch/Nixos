@@ -7,6 +7,8 @@
       dates = "Monday 09:00";
       options = "--delete-older-than 7d";
     };
+
+    # Hard link identical files in the store automatically
     autoOptimiseStore = true;
     #readOnlyStore = false;
     trustedUsers = [ "root" "valentino" ]; # in order to use cachix. Other options: "@wheel"
@@ -25,8 +27,9 @@
       '';
 
     # Other options (currently not used)
-    #daemonNiceLevel = 2; # 19 max
-    #daemonIONiceLevel = 2; # 7 max
+    # Make builds run with low priority so my system stays responsive
+    #daemonNiceLevel = 2; # 19 max (or "idle")
+    #daemonIONiceLevel = 2; # 7 max (or "idle")
     #keep-outputs = true
     #keep-derivations = true
 
