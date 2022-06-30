@@ -28,6 +28,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
     #nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # Used to get some more updated packages
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    
+    ###              HYPRLAND               ###
+    hyprland = {
+      url = "github:vaxerski/Hyprland";
+      # build with your own instance of nixpkgs
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     ###              NIX COMMUNITY               ###
     #emacs-overlay.url = "github:nix-community/emacs-overlay"; "github:nix-community/emacs-overlay?rev=859fbd8964ae5605e44020a559d73905f1e1cfa5"; # In order to catch cachix
@@ -39,7 +46,7 @@
   # - Can be pretty much anything: Packages / configurations / modules / etc...
   # The @ symbols means `Bind the args to inputs`
   #outputs = inputs @ {nixpkgs, nixos-unstable, nixos-hardware, ... }: 
-  outputs = {nixpkgs, nixos-hardware, ... }: 
+  outputs = {nixpkgs, nixos-hardware, hyprland, ... }: 
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -54,6 +61,7 @@
           inherit system;
           modules = [
             nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen1 # Nixos hardware
+            hyprland.nixosModules.default # hyprland WM
             ./thinkpad.nix
           ];
 
