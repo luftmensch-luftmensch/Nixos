@@ -1,15 +1,27 @@
 { config, lib, pkgs, modulesPath, ... }:
 let
   kernel-module = if (config.networking.hostName == "home") then 
-      "kvm-intel" else "kvm-amd";
+    "kvm-intel" else "kvm-amd";
   #kernel-package = if (config.networking.hostName == "home") then 
   #    "linuxPackages" else "linuxPackages_latest";
+
+  additional_kernel_modules = lib.optionals (config.networking.hostName == "PC") [
+    "acpi_call"
+    "amdgpu"
+  ];
+
+  # Force use of the thinkpad_acpi driver for backlight control.
+  # This allows the backlight save/load systemd service to work.
+  additional_kernel_params = lib.optionals (config.networking.hostName == "PC") [
+    "acpi_backlight=native"
+  ];
 in
 {
   boot = {
-    extraModulePackages = [ ];
-    kernelModules = [ "${kernel-module}" ];
-    kernelParams = [ "quiet" "udev.log_priority=3" "loglevel=3" "rd.systemd.show_status=auto" "rd.udev.log_level=3"  ]; # silent boot. Taken from -> https://wiki.archlinux.org/title/Silent_boot
+    #extraModulePackages = [ ];
+    extraModulePackages = with config.boot.kernelPackages; lib.optionals (config.networking.hostName == "PC") [ acpi_call ];
+    kernelModules = [ "${kernel-module}"] ++ additional_kernel_modules ;
+    kernelParams = [ "quiet" "udev.log_priority=3" "loglevel=3" "rd.systemd.show_status=auto" "rd.udev.log_level=3"    ] ++ additional_kernel_params; # silent boot. Taken from -> https://wiki.archlinux.org/title/Silent_boot
     #kernelPackages = pkgs."${kernel-package}"; #pkgs.linuxPackages; # pkgs.linuxPackages_latest;
     kernelPackages = pkgs.linuxPackages; # pkgs.linuxPackages_latest;
     zfs.enableUnstable = true; # enable it when using the latest kernel
@@ -30,7 +42,6 @@ in
 
     # Kernel params with zfs
     # "zfs.zfs_arc_max=17179860388" # 16GB, was 8383029248 (8GB) # Tune ZFS ARC size
-
 
     supportedFilesystems = [ "zfs" ];
   };

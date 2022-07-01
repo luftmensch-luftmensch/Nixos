@@ -6,6 +6,8 @@
     #  enable = true; 
     #};
 
+    #fstrim.enable = lib.mkDefault true; 
+    
     logind = {
       lidSwitch = "suspend"; #don't suspend when lid is closed (other options are poweroff reboot hatl kexec suspend hibernate hybrid-sleep suspend-then-hiberante lock)
       lidSwitchDocked = "poweroff";
