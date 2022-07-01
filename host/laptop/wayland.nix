@@ -1,33 +1,20 @@
 { lib, config, pkgs, ... }:
 {
-  #environment.sessionVariables = rec {
-  #  MOZ_ENABLE_WAYLAND = "1";
-  #  MOZ_DBUS_REMOTE = "1";
-  #  SDL_VIDEODRIVER ="wayland";
-  #  QT_QPA_PLATFORM ="wayland";
-  #  QT_QPA_PLATFORMTHEME = "qt5ct";
-  #  QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-  #  _JAVA_AWT_WM_NONREPARENTING = "1";
-  #  XDG_SESSION_TYPE = "wayland";
-  #};
-
   programs.sway =  {
     enable = true;
     wrapperFeatures.gtk = true;
     #wrapperFeatures.base = true;
     extraPackages = with pkgs; [
-      #swaylock # substituted with swaylock-effects
+
       bemenu # dmenu for wayland
-      #sxiv
       imv
+
+      # Utility program for clipboard & screen recording of wlroots-based compositors
       wl-clipboard
-      wf-recorder # Utility program for screen recording of wlroots-based compositors
-      #mako # notification daemon
-      #wofi
+      wf-recorder
 
       foot # Wayland native terminal
-      # GTK Theme & Font
-      glib 
+      glib # GTK Theme & Font
 
       # Screenshots utility
       sway-contrib.grimshot # (grimshot --notify copy area)
@@ -37,12 +24,16 @@
       
       waybar # Bar
 
-      #xwayland An X server for interfacing X11 apps with the Wayland protocol
-      #waypipe # A network proxy for Wayland clients (applications)
-
       # Sway relative programs
       swayidle
-      swaylock-effects
+      swaylock-effects # a more customizable `swaylock`
+
+      ### Other programs (currently not used) ###
+
+      #mako # notification daemon
+      #wofi # rofi for wayland
+      #xwayland An X server for interfacing X11 apps with the Wayland protocol
+      #waypipe # A network proxy for Wayland clients (applications)
 
     ];
 
@@ -52,8 +43,7 @@
     #export GDK_BACKEND=wayland
     #export CLUTTER_BACKEND=wayland
 
-    # Fixing java apps (especially idea) -> _JAVA_AWT_WM_NONREPARENTING = "1";
-
+    # Fixing java apps (especially intellij) -> _JAVA_AWT_WM_NONREPARENTING = "1";
 
     extraSessionCommands = ''
       export MOZ_ENABLE_WAYLAND=1
@@ -66,10 +56,7 @@
       export XDG_SESSION_TYPE=wayland
       export XDG_CURRENT_DESKTOP=sway
     '';
-
   };
 
-  programs.hyprland = {
-    enable = true;
-  };
+  #programs.hyprland = {enable = true;};
 }

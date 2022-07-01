@@ -10,8 +10,8 @@ in
     extraModulePackages = [ ];
     kernelModules = [ "${kernel-module}" ];
     kernelParams = [ "quiet" "udev.log_priority=3" "loglevel=3" "rd.systemd.show_status=auto" "rd.udev.log_level=3"  ]; # silent boot. Taken from -> https://wiki.archlinux.org/title/Silent_boot
-    #kernelPackages = pkgs.linuxPackages_latest;
-    kernelPackages = pkgs.linuxPackages;
+    #kernelPackages = pkgs."${kernel-package}"; #pkgs.linuxPackages; # pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages; # pkgs.linuxPackages_latest;
     zfs.enableUnstable = true; # enable it when using the latest kernel
 
     # Try out:

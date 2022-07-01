@@ -9,6 +9,7 @@
     ./networking.nix # Networking option
     ./openvpn.nix # VPN with OpenVPN
     ./services-laptop.nix # Services specific for my thinkpad configuration
+    ./settings.nix # In substitution of nixos-hardware
     ./wayland.nix # Sway WM
     ./wireguard.nix # VPN with Wireguard
     ./xorg.nix # X11 configuration

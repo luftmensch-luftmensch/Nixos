@@ -7,7 +7,7 @@
       enable = true;
     };
     cpu = {
-      amd.updateMicrocode = true;
+      amd.updateMicrocode = true; # lib.mkDefault config.hardware.enableRedistributableFirmware;
     };
 
     opengl= {
