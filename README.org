@@ -45,8 +45,11 @@
 * About
 This is my configuration for NixOS, meant to harmonize my different systems.
 
-This is **not** necessarily an example of good practices. This is what I am
-(probably) currently using.
+-----
+This is **not** necessarily an example of good practices. This is what I am (probably) currently using.
+
+The purpose of making this repository public is for me to be able to easily share my current configuration files with others. It is not expected that anyone would use these files verbatim. I update files frequently, often multiple times per day, and at any given point, some files might be broken. I often push commits just so I can easily move files from one computer to another to continue working on them. I will make tags when I think my setup is stable enough for others to use.
+-----
 
 The entire system configuration is written in Nix. It is composed of a host specific configuration ([[file:host/home/][home]] & [[file:host/laptop/][laptop]]) that includes stuff  specific for my different hosts; a [[file:common/][common]] directory containing shared config files between all my machines, and a [[file:cachix/][cachix]] directory in order to make less expensive switching to a new generation ([[https://app.cachix.org/cache/nix-community][Installation guide]]).
 
