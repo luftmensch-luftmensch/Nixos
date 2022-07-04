@@ -4,6 +4,7 @@
     variables = {
       QT_QTA_PLATFORMTHEME = "qt5ct";
       QT_QPA_PLATFORMTHEME = "qt5ct";
+      #AMD_VULKAN_ICD = "RADV";
       EDITOR = "vim";
       BROWSER= "firefox";
       PAGER="less --quit-at-eof";

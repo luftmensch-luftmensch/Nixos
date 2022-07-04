@@ -16,8 +16,18 @@
     opengl= {
       enable = true;
       #driSupport = true;
-      extraPackages = with pkgs; [ amdvlk ];
+      #driSupport32Bit = true;
+      extraPackages = with pkgs; [
+        amdvlk
+        #rocm-opencl-icd
+        #rocm-opencl-runtime
+      ];
+
+      #extraPackages32 = with pkgs; [
+      #  driversi686Linux.amdvlk
+      #];
     };
+
     #pulseaudio = {
     #  enable = true;
     #};
