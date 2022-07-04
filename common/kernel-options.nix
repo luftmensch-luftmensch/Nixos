@@ -14,6 +14,8 @@ let
   # This allows the backlight save/load systemd service to work.
   additional_kernel_params = lib.optionals (config.networking.hostName == "PC") [
     "acpi_backlight=native"
+    #"radeon.si_support=0" "amdgpu.si_support=1" 
+    #"radeon.cik_support=0" "amdgpu.cik_support=1" 
   ];
 in
 {
