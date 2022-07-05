@@ -1,7 +1,6 @@
-#{ pkgs, inputs, lib, config, ... }: # Enable only when using two different version of nixpkgs (stable/unstable) at once
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, ... }: # inputs (Add it only when using two different version of nixpkgs (stable/unstable) at once)
 let
-  # lib.optionals (config.networking.hostName == "home")
+  
   user_pkgs = with pkgs; if (config.networking.hostName == "home") then [
     chromium # Basic packages without custom command line flags
     dmidecode # Tool per ricavare le informazioni sull'hardware del computer contenute nel BIOS
@@ -225,6 +224,7 @@ in
     scrcpy
     shellcheck
     speedtest-cli
+    spotdl # Spotify playlists downloader ( Homepage: https://github.com/spotDL/spotify-downloader )
     spotify
     sqlite
     #sshpass
