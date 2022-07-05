@@ -242,7 +242,7 @@ in
     thunderbird # Email client
     traceroute
 
-    #texlive.combined.scheme-full
+    texlive.combined.scheme-full
 
     ### U ###
     #udiskie #(udisks2 frontend)
