@@ -8,6 +8,10 @@
 #   in 
 {
   services = {
+    # Auto nice daemon
+    #ananicy = {
+    #  enable = true;
+    #}
     #chrony = {
     #  enable = true;
     #};
@@ -21,6 +25,11 @@
     #  package = (pkgs.callPackage ./fprint/fprintd.nix { });
     # prendi config da ~/config/nixos/fprint
     #};
+
+    # DBus service that allows applications to update firmware (To update the firmware: fwupdmgr get-updates)
+    #fwupd = {
+    #  enable = true;
+    #}
 
     #gpm = {
     #  enable = true; # Virtual mouse pointer for TTY consoles
