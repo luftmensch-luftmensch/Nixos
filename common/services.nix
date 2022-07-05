@@ -8,7 +8,6 @@
 #   in 
 {
   services = {
-
     #chrony = {
     #  enable = true;
     #};
@@ -27,6 +26,7 @@
     #  enable = true; # Virtual mouse pointer for TTY consoles
     #}
 
+
     #hardware = {
     #  bolt.enable = true; 
 
@@ -38,6 +38,11 @@
     #      model = "Brother-HL-1230-hl1250.ppd";
     #    }];
     #  };
+    #};
+
+    # Hard disk protection if the laptop falls:
+    #hdapsd = {
+    #  enable = true;
     #};
 
     locate = {
@@ -91,18 +96,6 @@
       enable = true;
       #drivers = [ brother_printer ]
     };
-
-    #redshift = {
-    #  enable = true;
-    #  brightness = {
-    #    day = "1";
-    #    night = "0.90";
-    #  };
-    #  temperature = {
-    #    day = 6500;
-    #    night = 3500;
-    #  };
-    #};
 
     # Smartctl daemon
     #smartd = {
