@@ -87,7 +87,7 @@ in
     #appimage-run
 
     ### B ###
-    bat
+    bat # After any updates of themes/syntaxes run `bat cache --build`
     #bc
     #betterlockscreen
     bind
