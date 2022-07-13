@@ -20,7 +20,6 @@ let
 in
 {
   boot = {
-    #extraModulePackages = [ ];
     extraModulePackages = with config.boot.kernelPackages; lib.optionals (config.networking.hostName == "PC") [ acpi_call ];
     kernelModules = [ "${kernel-module}"] ++ additional_kernel_modules ;
     kernelParams = [ "quiet" "udev.log_priority=3" "loglevel=3" "rd.systemd.show_status=auto" "rd.udev.log_level=3"    ] ++ additional_kernel_params; # silent boot. Taken from -> https://wiki.archlinux.org/title/Silent_boot

@@ -11,6 +11,6 @@
     ./services-laptop.nix # Services specific for my thinkpad configuration
     ./wayland.nix # Sway WM
     ./wireguard.nix # VPN with Wireguard
-    ./xorg.nix # X11 configuration
+    #./xorg.nix # X11 configuration
   ];
 }

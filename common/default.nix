@@ -20,5 +20,6 @@
     ./shared.nix # Timezone, keyboard options, fonts, environment options, Flatpak
     ./user.nix # Username + extragroup
     ./virtualisation.nix # virtualisation -> now using only libvirt
+    ./xorg.nix # X11 options
   ];
 }
