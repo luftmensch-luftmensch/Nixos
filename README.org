@@ -14,7 +14,7 @@
   <!-- Nixos Version -->
   <a href="https://nixos.org/"
           ><img
-              src="https://img.shields.io/badge/NixOS-v21.11-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white"
+              src="https://img.shields.io/badge/NixOS-v22.05-blue.svg?style=for-the-badge&logo=NixOS&logoColor=white"
               alt="Nixos Version"
       />
 

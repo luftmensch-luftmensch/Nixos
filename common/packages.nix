@@ -13,7 +13,7 @@ let
     polybarFull
     plymouth # enable also the boot option
     scrot # Screenshot utility on Xorg
-    vimHugeX # vim with X clipboard
+    #vimHugeX # vim with X clipboard
 
     xautolock
     xclip
@@ -211,6 +211,9 @@ in
     qt5ct
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.breeze-qt5
+    # Needed for the current SDDM theme -> see https://github.com/luftmensch-luftmensch/sddm-chill-theme
+    libsForQt5.qt5.qtgraphicaleffects
+    libsForQt5.qt5.qtquickcontrols
 
     qrcp
     #qutebrowser
