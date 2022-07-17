@@ -95,3 +95,18 @@ A convenience [[file:nix-install.sh][script]] is provided to setup the system on
 ** Useful nix dotfiles
 + [[https://github.com/hlissner/dotfiles][hlissner/dotfiles]];
 + [[https://github.com/NobbZ/nixos-config][NobbZ/nixos-config]];
++ [[https://github.com/ners/NixOS][ners/NixOS]];
++ [[https://github.com/balsoft/nixos-config][balsoft/nixos-config]];
++ [[https://github.com/Kranzes/nix-config][Kranzes/nix-config]];
++ [[https://github.com/jonringer/nixpkgs-config][jonringer/nixpkgs-config]];
++ [[https://github.com/sebastiant/dotfiles][sebastiant/dotfiles]];
+** Some extra places that you can get help
++ [[https://nixos.wiki/wiki/Packaging/Tutorial][How to Package]];
++ [[https://nixos.org/manual/nix/unstable/][Nix Lang Manual]];
+** How to build from CUSTOM nixpkgs
+#+begin_src bash
+export NIXPKGS=~/projects/nixpkgs
+nix-env -f $NIXPKGS -iA blender
+nix-shell -f $NIXPKGS -p python39Packages.gdtoolkit
+#+end_src
+

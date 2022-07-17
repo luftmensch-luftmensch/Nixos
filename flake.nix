@@ -66,6 +66,16 @@
             ./home.nix
           ];
         };
+
+      # -- DEBUG ONLY --
+      # Exposes the values to the `nix repl`
+      # nix-repl> :lf .#
+      # NOTE: This values are not used by the system
+      #h_lib = lib;
+      #h_pkgs = pkgs;
+      #h_pkgs_unstable = pkgs_unstable;
+      #h_inputs = inputs;
+
       };
     };
 }
