@@ -45,6 +45,7 @@ let
     '')
   ];
 
+  # chrome://flags/#enable-webrtc-pipewire-capturer (Enable it to share entire screen)
   wayland_custom_pkgs = with pkgs; lib.optionals (config.networking.hostName == "PC") [
     (chromium.override {
       commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WebRTCPipeWireCapturer --enable-usermedia-screen-capturing";
@@ -66,6 +67,13 @@ let
       '';
   };
 
+  programming_pkgs = with pkgs; [
+    androidStudioPackages.dev
+    dbeaver # A better alternative to PGAdmin
+    jetbrains.idea-community
+    postman
+  ];
+
   #unstable_pkgs = with pkgs; [
   #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
   #  inputs.nixos-unstable.legacyPackages.${pkgs.system}.librewolf # Waiting for this issue -> https://github.com/NixOS/nixpkgs/issues/172415
@@ -79,7 +87,6 @@ in
     ### A ###
     alacritty
     #android-file-transfer
-    #androidStudioPackages.dev
     #anydesk
     #ark
     #aspell aspellDicts.it # (moved to hunspell)
@@ -100,20 +107,19 @@ in
     ### C ###
     capitaine-cursors
     #carla
-    #chromium
     #colorpicker
 
     ### D ###
     dbus-sway-environment
-    #dbeaver # A better alternative to PGAdmin
     #devour # Enable terminal swallowing (used for zathura) # Only for X11
     dunst
     
     ### E ###
     #inputs.nixos-unstable.legacyPackages.${pkgs.system}.emacs
-    #emacsPgtkGcc
+
     # From trace: emacsPgtkGcc has been renamed to emacsPgtkNativeComp
     #emacsPgtkNativeComp # Needed an overlay for this! (emacs 29 with Pgtk + Gcc)
+
     emacs
     exa
     exiftool # Used for emms
@@ -131,10 +137,9 @@ in
 
     ### G ###
     git
-    # gitAndTools.gitFull
+    #gitAndTools.gitFull
 
-    # make sure the default gnome icons are avaliable
-    # to gtk applications
+    # Make sure the default gnome icons are avaliable to gtk applications
     gnome3.adwaita-icon-theme
     gtk3 # In substitution of gnome.gtk (removed on 13-01-2022)
     gnome3.gnome-disk-utility
@@ -142,7 +147,6 @@ in
     #gotop
 
     ### H ###
-    #haskellPackages.greenclip
     htop
     hugo
 
@@ -152,7 +156,6 @@ in
     hunspellDicts.en_US
 
     ### J ###
-    #jetbrains.idea-community
 
     ### K ###
     #kdenlive
@@ -192,8 +195,6 @@ in
 
     ### O ###
     obs-studio
-    #onedrive
-    #openvpn # VPN -> used as service
     openssl
 
     ### P ###
@@ -204,14 +205,14 @@ in
     #pcmanfm
     poppler 
     #postgresql_13
-    #postman
     #progress
 
     ### Q ###
     qt5ct
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.breeze-qt5
-    # Needed for the current SDDM theme -> see https://github.com/luftmensch-luftmensch/sddm-chill-theme
+    
+    # Needed for the current SDDM theme -> see https://github.com/luftmensch-luftmensch/sddm-theme
     libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.qt5.qtquickcontrols
 
@@ -239,7 +240,7 @@ in
 
     ### T ###
     #teamviewer
-    tectonic # self-contained TEX/LaTex engine (Guide at https://tectonic-typesetting.github.io/book/latest/index.html)
+    #tectonic # self-contained TEX/LaTex engine (Guide at https://tectonic-typesetting.github.io/book/latest/index.html)
     tdesktop
     #telnet
     thunderbird # Email client
@@ -251,30 +252,25 @@ in
     #udiskie #(udisks2 frontend)
     #ueberzug # (Needed for ranger (disabled) - Work only on Xorg)
 
-    # chrome://flags/#enable-webrtc-pipewire-capturer (Enable it to share entire screen)
-    #ungoogled-chromium # Fix to screen sharing under wayland (chromium crashed when trying to stream)
     #unrar
     unzip
     #usbguard # Protect against infected USB
     usbutils
 
     ### V ###
-    #vault # (bitwarden alternative)
     #viewnior
     #virt-viewer 
-    #vscode
 
     ### W ###
     wget
-    #wireguard # VPN -> used as service
 
     ### X ###
     xdg-user-dirs
-    xdotool
-    xfce.thunar # Need xfce.tumbler
+
+    xfce.thunar
     xfce.thunar-archive-plugin
     #xfce.thunar-volman # automatic management of removable drives and media
-    xfce.tumbler
+    xfce.tumbler # Needed for thunar
 
     ### Y ###
     #youtube-dl
@@ -291,7 +287,6 @@ in
     jdk
     libtool
     python3
-    #python39Packages.i3ipc
     python39Packages.mutagen # Used to add information to music
     python39Packages.pip
     python39Packages.psutil
@@ -344,5 +339,5 @@ in
     #    pygmentex;
     #})
 
-  ] ++ user_pkgs ++ additional_pkgs_with_flags ++ wayland_custom_pkgs ; #++ unstable_pkgs;
+  ] ++ user_pkgs ++ additional_pkgs_with_flags ++ wayland_custom_pkgs ++ programming_pkgs; #++ unstable_pkgs;
 }
